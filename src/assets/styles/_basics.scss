@@ -1,0 +1,36 @@
+@mixin activeLink {
+  content: "";
+  background: color(lightSecondary);
+  background: linear-gradient(
+    48deg,
+    color(lightSecondary) 0%,
+    color(darkSecondary) 71%
+  );
+  display: block;
+  position: absolute;
+}
+
+@mixin newLink {
+  content: "New";
+  font-size: x-small;
+  background: color(lightSecondary);
+  background: linear-gradient(
+    48deg,
+    color(lightSecondary) 0%,
+    color(darkSecondary) 71%
+  );
+  display: block;
+  position: absolute;
+  padding: 3px;
+  padding-bottom: 10px;
+  border-radius: 10%;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+}

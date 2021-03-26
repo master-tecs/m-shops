@@ -1,0 +1,17 @@
+$colors: (
+  primary: #1a2038,
+  secondary: #8f6afc,
+  lightSecondary: rgb(182, 158, 252),
+  darkSecondary: rgba(122, 93, 215, 1),
+  surface: #212940,
+  primary-light: lighten(#1a2038, 40%),
+  primary-dark: darken(#1a2038, 40%),
+  secondary-light: lighten(#212940, 40%),
+  secondary-dark: darken(#212940, 40%),
+  white: #ffffff,
+  black: #000000,
+);
+
+@function color($color-name) {
+  @return map-get($map: $colors, $key: $color-name);
+}

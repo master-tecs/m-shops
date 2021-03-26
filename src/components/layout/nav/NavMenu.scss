@@ -1,0 +1,45 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/basics";
+@import "../../../assets/styles/brackPoints";
+
+.navMenu {
+  display: flex;
+
+  @include media("<tablet") {
+    display: none;
+  }
+
+  &__link {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: color(white);
+
+    &:hover {
+      color: color(lightSecondary);
+      color: linear-gradient(
+        48deg,
+        color(lightSecondary) 0%,
+        color(darkSecondary) 71%
+      );
+    }
+  }
+
+  .active {
+    font-weight: 700;
+  }
+
+  .active::after {
+    @include activeLink();
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+
+  .new::before {
+    @include newLink();
+    margin: 10px;
+    top: 40px;
+    margin-top: -25px;
+  }
+}

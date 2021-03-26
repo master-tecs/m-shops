@@ -1,0 +1,83 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/basics";
+@import "../../assets/styles/brackPoints";
+
+.sideBar {
+  display: none;
+
+  @include media("<tablet") {
+    position: absolute;
+    color: color(white);
+
+    &__active {
+      display: block;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: color(surface);
+      // height: 100%;
+      // width: 100%;
+      z-index: 10;
+    }
+
+    &__navMenu {
+      margin: 15px 5px;
+    }
+
+    &__btn {
+      margin: 10px auto;
+      width: 100px;
+    }
+
+    &__close {
+      top: 0;
+      display: fixed;
+      width: 100%;
+      float: left;
+    }
+
+    &__closeIcon {
+      float: left;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    &__link {
+      padding: 20px;
+      cursor: pointer;
+
+      &:hover {
+        color: color(lightSecondary);
+        color: linear-gradient(
+          48deg,
+          color(lightSecondary) 0%,
+          color(darkSecondary) 71%
+        );
+      }
+    }
+
+    .active {
+      font-weight: 700;
+    }
+
+    .active::after {
+      @include activeLink();
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      left: 48%;
+      margin-top: 5px;
+      transform: translate(-50%, -50%);
+    }
+
+    .new::before {
+      @include newLink();
+      left: 50%;
+      margin-top: -10px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

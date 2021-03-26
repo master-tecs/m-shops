@@ -1,0 +1,114 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+
+.banner {
+  width: 90%;
+  height: 450px;
+  //   margin: 10px 40px;
+  margin: auto;
+  margin-top: 35px;
+  border-radius: 50px;
+  color: color(white);
+  background-image: url("../../../assets/img/2.svg");
+  //   background-repeat: no-repeat;
+  //   background-blend-mode: screen;
+  background-position-x: right;
+  background-color: color(surface);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include media("<ipad") {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex: 1;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 70px;
+
+    @include media("<ipad") {
+      margin: 0;
+      height: 45%;
+      width: 90%;
+    }
+  }
+
+  &__text {
+    text-align: left;
+
+    .banner__smallTitle {
+      font-size: small;
+      text-transform: uppercase;
+
+      @include media("<ipad") {
+        font-size: smaller;
+      }
+    }
+
+    .banner__shopName {
+      margin: 6px 0;
+      font-size: xx-large;
+
+      @include media("<ipad") {
+        font-size: x-large;
+      }
+    }
+
+    .banner__bigTitle {
+      margin: 6px 0;
+      font-size: xx-large;
+
+      @include media("<ipad") {
+        font-size: x-large;
+      }
+    }
+
+    .banner__discription {
+      margin: 13px 0;
+      font-size: small;
+      line-height: 27px;
+
+      @include media("<ipad") {
+        font-size: smaller;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__cta {
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+  }
+
+  &__right {
+    width: 50%;
+    margin-left: 30px;
+    margin-right: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    @include media("<ipad") {
+      margin: 0;
+      height: 35%;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__imgSvg {
+    width: fit-content;
+    height: fit-content;
+  }
+}

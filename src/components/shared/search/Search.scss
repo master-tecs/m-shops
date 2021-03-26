@@ -1,0 +1,42 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+
+.search {
+  background-color: color(white);
+  //   background-color: rgb(226, 248, 194);
+  padding: 7px 7px 7px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.8;
+  border-radius: 25px;
+  margin-right: 20px;
+
+  @include media("<tablet") {
+    padding: 5px 5px 5px 8px;
+    flex: 0.3;
+    margin: 0;
+    margin-right: 5px;
+  }
+
+  &__commentIcon {
+    color: color(darkSecondary) !important;
+    font-size: large !important;
+  }
+
+  &__input {
+    padding-left: 5px;
+    font-size: medium;
+    flex: 1;
+    height: 100%;
+    outline: 0;
+    border: 0;
+
+    @include media("<tablet") {
+      // width:
+      padding-left: 2px;
+      font-size: small;
+      // flex: 05;
+    }
+  }
+}

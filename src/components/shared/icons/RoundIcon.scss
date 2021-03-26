@@ -1,0 +1,32 @@
+@import "../../../assets/styles/colors";
+
+.roundIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px !important;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &__icon {
+    font-size: medium !important;
+  }
+}
+
+.navIconColor {
+  background: rgb(244, 137, 65);
+  background: linear-gradient(
+    48deg,
+    rgba(244, 137, 65, 1) 0%,
+    rgba(237, 208, 123, 1) 82%
+  );
+}
+
+.logoIconColor {
+  background: rgb(182, 158, 252);
+  background: linear-gradient(
+    48deg,
+    rgba(182, 158, 252, 1) 0%,
+    rgba(122, 93, 215, 1) 71%
+  );
+}
