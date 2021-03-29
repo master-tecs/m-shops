@@ -3,10 +3,10 @@
 
 .banner {
   width: 90%;
-  height: 450px;
+  height: 70vh;
   //   margin: 10px 40px;
   margin: auto;
-  margin-top: 35px;
+  margin-top: 55px;
   border-radius: 50px;
   color: color(white);
   background-image: url("../../../assets/img/2.svg");
@@ -37,7 +37,7 @@
 
     @include media("<ipad") {
       margin: 0;
-      height: 45%;
+      height: min-content;
       width: 90%;
     }
   }
@@ -101,7 +101,7 @@
 
     @include media("<ipad") {
       margin: 0;
-      height: 35%;
+      flex: 0.7;
       width: 100%;
       justify-content: center;
     }

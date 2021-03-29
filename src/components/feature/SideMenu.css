@@ -1,0 +1,92 @@
+/**
+*
+* Testing
+*
+**/
+.sideBar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .sideBar {
+    position: absolute;
+    color: #ffffff;
+  }
+  .sideBar__active {
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #212940;
+    z-index: 10;
+  }
+  .sideBar__navMenu {
+    margin: 15px 5px;
+  }
+  .sideBar__btn {
+    margin: 10px auto;
+    width: 100px;
+  }
+  .sideBar__close {
+    top: 0;
+    display: fixed;
+    width: 100%;
+    float: left;
+  }
+  .sideBar__closeIcon {
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .sideBar__link {
+    padding: 20px;
+    cursor: pointer;
+  }
+  .sideBar__link:hover {
+    color: #b69efc;
+    color: linear-gradient(48deg, #b69efc 0%, #7a5dd7 71%);
+  }
+  .sideBar .active {
+    font-weight: 700;
+  }
+  .sideBar .active::after {
+    content: "";
+    background: #b69efc;
+    background: linear-gradient(48deg, #b69efc 0%, #7a5dd7 71%);
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    left: 48%;
+    margin-top: 5px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .sideBar .new::before {
+    content: "New";
+    font-size: x-small;
+    background: #b69efc;
+    background: linear-gradient(48deg, #b69efc 0%, #7a5dd7 71%);
+    display: block;
+    position: absolute;
+    padding: 3px;
+    padding-bottom: 10px;
+    border-radius: 10%;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    left: 50%;
+    margin-top: -10px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+/*# sourceMappingURL=SideMenu.css.map */

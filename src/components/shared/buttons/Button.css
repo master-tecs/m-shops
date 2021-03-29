@@ -1,0 +1,86 @@
+/**
+*
+* Testing
+*
+**/
+.button {
+  padding: 6px 20px !important;
+  border-radius: 25px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #b69efc;
+  background: linear-gradient(48deg, #b69efc 0%, #7a5dd7 71%);
+  cursor: pointer;
+  line-height: 15px !important;
+  letter-spacing: 1px !important;
+}
+
+.button :hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .button {
+    padding: 6px 20px !important;
+  }
+}
+
+@media (max-width: 359px) {
+  .button {
+    padding: 3px 10px !important;
+    min-width: 4px !important;
+  }
+}
+
+.button__icon .MuiSvgIcon-root {
+  color: #ffffff !important;
+  font-size: 20px !important;
+  padding-right: 5px !important;
+}
+
+@media (max-width: 359px) {
+  .button__icon .MuiSvgIcon-root {
+    padding-right: 0px !important;
+  }
+}
+
+.button .showOnlyOnSmallDivce {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .button .showOnlyOnSmallDivce {
+    display: block;
+  }
+}
+
+.button p {
+  margin: 0;
+  padding: 0;
+  font-size: x-small !important;
+  font-weight: 300 !important;
+  color: #ffffff !important;
+  -webkit-margin-before: 0 !important;
+          margin-block-start: 0 !important;
+  -webkit-margin-after: 0 !important;
+          margin-block-end: 0 !important;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+}
+
+@media (max-width: 767px) {
+  .button p {
+    display: none;
+    font-weight: normal !important;
+  }
+}
+/*# sourceMappingURL=Button.css.map */

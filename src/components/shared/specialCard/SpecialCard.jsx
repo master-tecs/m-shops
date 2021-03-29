@@ -3,7 +3,6 @@ import RoundIcon from "../icons/RoundIcon";
 import Button from "../buttons/Button";
 import FavoriteRoundedIcon from "@material-ui/icons/FavoriteRounded";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import img1 from "../../../assets/img/shoes/shoe3.jpg";
 import "./SpecialCard.scss";
 
 function SpecialCard({ title, rate, price, image }) {
@@ -13,7 +12,7 @@ function SpecialCard({ title, rate, price, image }) {
         <div className="specialCard__icon">
           <RoundIcon Icon={FavoriteRoundedIcon} />
         </div>
-        <img src={img1} className="specialCard__img" alt="" />
+        <img src={image} className="specialCard__img" alt="" />
       </div>
       <div className="specialCard__text">
         <p className="specialCard__title">{title}</p>

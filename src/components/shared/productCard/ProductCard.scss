@@ -1,0 +1,86 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+
+.productCard {
+  width: 300px;
+  min-width: 300px;
+  // max-height: 356px;
+  height: 356px;
+  margin: auto;
+  // margin-right: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  color: color(white);
+  justify-content: center;
+  align-items: center;
+  background-color: color(surface);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.8);
+
+  // @include media("<330") {
+  //   min-width: 200px;
+  //   height: 300px;
+  // }
+
+  &__top {
+    position: relative;
+    background-color: transparent;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 45%;
+  }
+  &__starIcon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: color(secondary);
+    border-radius: 50%;
+
+    .MuiIconButton-root {
+      color: color(white) !important;
+    }
+  }
+
+  &__LikeIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 1px 5px;
+    top: 10px;
+    right: 10px;
+    background-color: color(white);
+    border-radius: 25px;
+    color: color(secondary) !important;
+
+    > p {
+      margin: 3px;
+      font-size: small;
+    }
+  }
+  &__img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    border-radius: 25px;
+  }
+  &__text {
+    width: 90%;
+    margin: 5px auto;
+  }
+  &__title {
+    font-size: medium;
+  }
+  &__rating {
+    width: 90%;
+    margin: 5px auto 10px;
+    display: flex;
+    justify-content: center;
+  }
+  &__pricing {
+    margin-bottom: 10px;
+    font-size: medium;
+  }
+}

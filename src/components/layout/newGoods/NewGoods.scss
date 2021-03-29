@@ -1,0 +1,54 @@
+@import "../../../assets/styles/colors";
+
+.NewGoods {
+  display: flex;
+  flex-direction: column;
+  margin: 80px auto 50px;
+  width: 90%;
+  height: 400px;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &__left {
+      display: flex;
+      align-items: center;
+    }
+
+    &__heading {
+      font-size: medium;
+      font-weight: bold;
+      margin-right: 10px;
+      color: color(white);
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+    }
+
+    &__backBtn {
+      margin-right: 5px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .label {
+    padding: 5px 15px;
+    border-radius: 25px;
+    color: color(white);
+    background: linear-gradient(
+      48deg,
+      rgba(182, 158, 252, 1) 0%,
+      rgba(122, 93, 215, 1) 71%
+    );
+  }
+}

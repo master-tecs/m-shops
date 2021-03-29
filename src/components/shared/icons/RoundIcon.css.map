@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACT,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,cAAc;EACvB,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,OAAO;CAKhB;;AAHE,AAAD,gBAAO,CAAC;EACN,SAAS,EAAE,iBAAiB;CAC7B;;AAGH,AAAA,aAAa,CAAC;EACZ,UAAU,EAAE,OAAiB;EAC7B,UAAU,EAAE,+CAIX;CACF;;AAED,AAAA,cAAc,CAAC;EACb,UAAU,EAAE,OAAkB;EAC9B,UAAU,EAAE,+CAIX;CACF",
+    "sources": [
+        "RoundIcon.scss",
+        "../../../assets/styles/_colors.scss"
+    ],
+    "names": [],
+    "file": "RoundIcon.css"
+}

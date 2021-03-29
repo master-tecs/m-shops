@@ -1,0 +1,29 @@
+.roundIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.roundIcon__icon {
+  font-size: medium !important;
+}
+
+.navIconColor {
+  background: #f48941;
+  background: linear-gradient(48deg, #f48941 0%, #edd07b 82%);
+}
+
+.logoIconColor {
+  background: #b69efc;
+  background: linear-gradient(48deg, #b69efc 0%, #7a5dd7 71%);
+}
+/*# sourceMappingURL=RoundIcon.css.map */

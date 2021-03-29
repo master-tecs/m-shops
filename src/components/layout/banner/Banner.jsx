@@ -2,6 +2,7 @@ import React from "react";
 import Search from "../../shared/search/Search";
 import Button from "../../shared/buttons/Button";
 import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
+import img1 from "../../../assets/img/headset/1.png";
 import SpecialCard from "../../shared/specialCard/SpecialCard";
 import "./Banner.scss";
 
@@ -28,7 +29,7 @@ function Banner() {
         </div>
       </div>
       <div className="banner__right">
-        <SpecialCard title="SpecialCard" />
+        <SpecialCard title="SpecialCard" image={img1} />
       </div>
     </div>
   );

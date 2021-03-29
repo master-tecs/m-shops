@@ -4,6 +4,7 @@
 
 .navMenu {
   display: flex;
+  position: relative;
 
   @include media("<tablet") {
     display: none;
@@ -40,6 +41,6 @@
     @include newLink();
     margin: 10px;
     top: 40px;
-    margin-top: -25px;
+    margin-top: -45px;
   }
 }

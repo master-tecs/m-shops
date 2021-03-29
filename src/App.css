@@ -1,0 +1,33 @@
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background-color: #1a2038 !important;
+  font-family: Verdana, Tahoma, Geneva, sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.app::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=App.css.map */
