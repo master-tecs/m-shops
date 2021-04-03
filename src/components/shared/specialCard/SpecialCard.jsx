@@ -3,11 +3,15 @@ import RoundIcon from "../icons/RoundIcon";
 import Button from "../buttons/Button";
 import FavoriteRoundedIcon from "@material-ui/icons/FavoriteRounded";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import StarRatings from "react-star-ratings";
 import "./SpecialCard.scss";
 
-function SpecialCard({ title, rate, price, image }) {
+function SpecialCard({ title, rate, price, image, type, x, y }) {
   return (
-    <div className="specialCard">
+    <div
+      className={`specialCard ${type}Card`}
+      style={{ left: `${x}px`, marginTop: `${y}px` }}
+    >
       <div className="specialCard__top">
         <div className="specialCard__icon">
           <RoundIcon Icon={FavoriteRoundedIcon} />
@@ -17,9 +21,19 @@ function SpecialCard({ title, rate, price, image }) {
       <div className="specialCard__text">
         <p className="specialCard__title">{title}</p>
       </div>
-      <div className="specialCard__rating">
-        <div className="specialCard__star">{rate}</div>
-        <p className="specialCard__price">{price}</p>
+      {rate && (
+        <div className="specialCard__rating">
+          <StarRatings
+            rating={rate}
+            numberOfStars={5}
+            starDimension="25px"
+            starRatedColor="yellow"
+            name="rating"
+          />
+        </div>
+      )}
+      <div className="specialCard__pricing">
+        <p>{price}</p>
       </div>
       <Button Icon={ShoppingCartIcon} text="Add Card" />
     </div>

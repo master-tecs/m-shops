@@ -29,7 +29,7 @@ function Banner() {
         </div>
       </div>
       <div className="banner__right">
-        <SpecialCard title="SpecialCard" image={img1} />
+        <SpecialCard title="SpecialCard" image={img1} type="banner" />
       </div>
     </div>
   );

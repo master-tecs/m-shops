@@ -16,6 +16,44 @@ import "slick-carousel/slick/slick-theme.css";
 function NewGoods() {
   const slider = useRef();
 
+  const products = [
+    {
+      title: "Cool headset",
+      price: "$243",
+      image: img1,
+      rate: 4.5,
+      likes: "907",
+    },
+    {
+      title: "Shoe",
+      price: "$443",
+      image: img2,
+      rate: 4,
+      likes: "787",
+    },
+    {
+      title: "Shoe",
+      price: "$143",
+      image: img3,
+      rate: 4,
+      likes: "657",
+    },
+    {
+      title: "Nice headset",
+      price: "$343",
+      image: img4,
+      rate: 4,
+      likes: "957",
+    },
+    {
+      title: "Black headset",
+      price: "$399",
+      image: img5,
+      rate: 4,
+      likes: "857",
+    },
+  ];
+
   const settings = {
     dots: false,
     infinite: true,
@@ -75,45 +113,18 @@ function NewGoods() {
           </div>
         </div>
       </div>
-      {/* <div> */}
       <Slider ref={slider} {...settings}>
-        <ProductCard
-          title="cool headset"
-          price="$242"
-          image={img4}
-          rate={4.5}
-          likes="973"
-        />
-        <ProductCard
-          title="Shoes"
-          price="$242"
-          image={img2}
-          rate={5}
-          likes="633"
-        />
-        <ProductCard
-          title="Black headset"
-          price="$242"
-          image={img5}
-          rate={3.5}
-          likes="893"
-        />
-        <ProductCard
-          title="Shoe"
-          price="$242"
-          image={img3}
-          rate={4}
-          likes="833"
-        />
-        <ProductCard
-          title="Headset"
-          price="$242"
-          image={img1}
-          rate={4}
-          likes="453"
-        />
+        {products.map((product, index) => (
+          <ProductCard
+            key={index}
+            title={product.title}
+            price={product.price}
+            image={product.image}
+            rate={product.rate}
+            likes={product.likes}
+          />
+        ))}
       </Slider>
-      {/* </div> */}
     </div>
   );
 }

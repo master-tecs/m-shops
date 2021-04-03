@@ -2,8 +2,8 @@
 @import "../../../assets/styles/brackPoints";
 
 .specialCard {
-  width: 180px;
-  height: 200px;
+  width: 270px;
+  height: 300px;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -11,10 +11,6 @@
   justify-content: center;
   align-items: center;
   background-color: color(white);
-
-  @include media("<tablet") {
-    display: none;
-  }
 
   &__top {
     position: relative;
@@ -50,9 +46,21 @@
     width: 90%;
     margin: 5px auto 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+  }
+  &__pricing {
+    margin-bottom: 10px;
+    font-size: medium;
   }
   &__price {
     font-size: medium;
+  }
+}
+
+.bannerCard {
+  width: 180px !important;
+  height: 200px !important;
+  @include media("<tablet") {
+    display: none;
   }
 }

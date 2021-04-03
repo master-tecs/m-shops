@@ -4,7 +4,7 @@ import "./RoundIcon.scss";
 
 function RoundIcon({ Icon, type }) {
   return (
-    <IconButton className={`roundIcon ${type}`}>
+    <IconButton className={`${type} roundIcon `}>
       <Icon className="roundIcon__icon" />
     </IconButton>
   );
