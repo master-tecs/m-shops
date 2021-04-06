@@ -2,7 +2,12 @@ import { Button as MaterialButton } from "@material-ui/core";
 import React from "react";
 import "./Button.scss";
 
-function Button({ text, Icon, showOnlyOnSmallDivce }) {
+function Button({
+  text,
+  Icon,
+  showOnlyOnSmallDivce,
+  dontShowTextOnSmallDivce,
+}) {
   return (
     <MaterialButton className="button">
       <div
@@ -12,7 +17,13 @@ function Button({ text, Icon, showOnlyOnSmallDivce }) {
       >
         {Icon && <Icon />}
       </div>
-      <p>{text}</p>
+      <p
+        className={`button__text ${
+          dontShowTextOnSmallDivce && "dontShowTextOnSmallDivce"
+        }`}
+      >
+        {text}
+      </p>
     </MaterialButton>
   );
 }

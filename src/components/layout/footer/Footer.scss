@@ -1,0 +1,191 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: color(surface);
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  border-radius: 35px;
+
+  &__logo {
+    display: flex;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 35px;
+    // justify-content: center;
+    align-items: center;
+    color: color(white);
+    cursor: pointer;
+
+    @include media("<tablet") {
+      margin-left: 20px;
+    }
+
+    p {
+      font-size: large;
+      font-weight: 700;
+
+      span {
+        color: color(secondary);
+      }
+    }
+  }
+
+  &__contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 50px;
+
+    @include media("<tablet") {
+      margin: 0 20px;
+    }
+  }
+
+  &__header,
+  &__email {
+    display: flex;
+    flex-direction: column;
+    color: color(white);
+    margin: 20px 50px 10px 0;
+    text-align: left;
+
+    @include media("<tablet") {
+      margin-left: 10px 15px 5px 0;
+    }
+
+    > h2 {
+      font-size: medium;
+      line-height: 35px;
+
+      @include media("<tablet") {
+        font-size: small;
+        line-height: 25px;
+      }
+    }
+
+    > h1 {
+      font-size: large;
+      line-height: 35px;
+
+      @include media("<tablet") {
+        font-size: medium;
+        line-height: 25px;
+      }
+    }
+
+    > a {
+      text-decoration: none;
+      font-size: small;
+      line-height: 25px;
+      color: color(white);
+
+      &:hover {
+        color: color(secondary);
+      }
+    }
+
+    &Action {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 20px 0 0 0;
+
+      > input {
+        padding: 15px 10px;
+        background-color: transparent;
+        border: 1px solid color(lightGreen);
+        border-radius: 25px;
+        outline: none;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    margin: 20px 50px;
+    color: color(white);
+
+    @include media("<tablet") {
+      margin: 5px 20px;
+    }
+  }
+
+  &__location,
+  &__socialMedias {
+    display: flex;
+    flex: 0.5;
+    align-items: center;
+
+    > p {
+      cursor: pointer;
+
+      &:hover {
+        color: color(secondary);
+      }
+
+      @include media("<tablet") {
+        font-size: small;
+      }
+    }
+  }
+  &__icon {
+    margin-right: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: color(secondary) !important;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid color(secondary) !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 50px;
+
+    @include media("<tablet") {
+      padding: 10px 20px;
+    }
+
+    .bottom__left {
+      display: flex;
+
+      > p {
+        margin: 10px;
+        font-size: small;
+        color: color(white);
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &:hover {
+          color: color(secondary);
+        }
+
+        @include media("<tablet") {
+          margin: 10px 0;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .bottom__right {
+      display: flex;
+      align-items: center;
+
+      @include media("<tablet") {
+        margin-right: 0;
+      }
+
+      .right__btn {
+        margin: 5px;
+      }
+    }
+  }
+}

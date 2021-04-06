@@ -34,9 +34,12 @@
 
     &__close {
       top: 0;
-      display: fixed;
+      display: flex;
+      height: 80px;
       width: 100%;
       float: left;
+      align-items: center;
+      padding-left: 10px;
     }
 
     &__closeIcon {

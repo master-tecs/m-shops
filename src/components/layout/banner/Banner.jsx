@@ -25,6 +25,7 @@ function Banner() {
             Icon={ShoppingCartRoundedIcon}
             showOnlyOnSmallDivce={true}
             text="Start Shopping"
+            dontShowTextOnSmallDivce
           />
         </div>
       </div>

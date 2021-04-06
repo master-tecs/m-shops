@@ -19,7 +19,7 @@ function SideMenu({ sidebar, setSidebar }) {
         <p className="sideBar__link">My shop</p>
         <p className="sideBar__link">About us</p>
         <div className="sideBar__btn">
-          <Button />
+          <Button text="LOG IN" />
         </div>
       </div>
     </div>

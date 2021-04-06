@@ -2,7 +2,7 @@
 @import "../../../assets/styles/brackPoints";
 
 .button {
-  padding: 6px 20px !important;
+  padding: 10px 20px !important;
   border-radius: 25px !important;
   display: flex;
   justify-content: space-evenly;
@@ -23,7 +23,7 @@
 
   @include media("<tablet") {
     // padding: 2px 7px !important;
-    padding: 6px 20px !important;
+    padding: 7px 15px !important;
   }
 
   @include media("<phone") {
@@ -47,9 +47,10 @@
 
     @include media("<tablet") {
       display: block;
+      // background-color: red;
     }
   }
-  p {
+  &__text {
     margin: 0;
     padding: 0;
     font-size: x-small !important;
@@ -60,7 +61,10 @@
     margin-block-end: 0 !important;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+  }
 
+  .dontShowTextOnSmallDivce {
+    // display: none !important;
     @include media("<tablet") {
       display: none;
       font-weight: normal !important;
