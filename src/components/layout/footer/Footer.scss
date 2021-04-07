@@ -11,6 +11,10 @@
   margin-top: 50px;
   border-radius: 35px;
 
+  @include media("<ipad") {
+    width: 95%;
+  }
+
   &__logo {
     display: flex;
     height: 50px;
@@ -49,6 +53,7 @@
   &__header,
   &__email {
     display: flex;
+    flex: 1;
     flex-direction: column;
     color: color(white);
     margin: 20px 50px 10px 0;

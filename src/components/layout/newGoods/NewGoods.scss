@@ -1,11 +1,17 @@
 @import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
 
 .NewGoods {
   display: flex;
   flex-direction: column;
-  margin: 80px auto 50px;
+  margin: auto;
+  margin-top: 80px;
   width: 90%;
   height: 400px;
+
+  @include media("<ipad") {
+    width: 95%;
+  }
 
   .top {
     display: flex;
@@ -16,11 +22,13 @@
     &__left {
       display: flex;
       align-items: center;
+      margin-right: 10px;
     }
 
     &__heading {
       font-size: medium;
       font-weight: bold;
+      text-align: left;
       margin-right: 10px;
       color: color(white);
     }

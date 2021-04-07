@@ -4,55 +4,12 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import Button from "../../shared/buttons/Button";
 import ProductCard from "../../shared/productCard/ProductCard";
-import img1 from "../../../assets/img/headset/2.png";
-import img2 from "../../../assets/img/shoes/11.png";
-import img3 from "../../../assets/img/shoes/13.png";
-import img4 from "../../../assets/img/headset/1.png";
-import img5 from "../../../assets/img/headset/4.png";
 import "./NewGoods.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function NewGoods() {
+function NewGoods({ heading, data }) {
   const slider = useRef();
-
-  const products = [
-    {
-      title: "Cool headset",
-      price: "$243",
-      image: img1,
-      rate: 4.5,
-      likes: "907",
-    },
-    {
-      title: "Shoe",
-      price: "$443",
-      image: img2,
-      rate: 4,
-      likes: "787",
-    },
-    {
-      title: "Shoe",
-      price: "$143",
-      image: img3,
-      rate: 4,
-      likes: "657",
-    },
-    {
-      title: "Nice headset",
-      price: "$343",
-      image: img4,
-      rate: 4,
-      likes: "957",
-    },
-    {
-      title: "Black headset",
-      price: "$399",
-      image: img5,
-      rate: 4,
-      likes: "857",
-    },
-  ];
 
   const settings = {
     dots: false,
@@ -101,7 +58,7 @@ function NewGoods() {
     <div className="NewGoods">
       <div className="top">
         <div className="top__left">
-          <p className="top__heading">New goods</p>
+          <p className="top__heading">{heading}</p>
           <label className="label">New</label>
         </div>
         <div className="top__right">
@@ -114,7 +71,7 @@ function NewGoods() {
         </div>
       </div>
       <Slider ref={slider} {...settings}>
-        {products.map((product, index) => (
+        {data.map((product, index) => (
           <ProductCard
             key={index}
             title={product.title}
