@@ -47,12 +47,57 @@ function index() {
       likes: "857",
     },
   ];
+  const products2 = [
+    {
+      title: "Cool headset",
+      price: "$243",
+      image: img1,
+      rate: 4.5,
+      likes: "907",
+    },
+    {
+      title: "Nice headset",
+      price: "$343",
+      image: img4,
+      rate: 4,
+      likes: "957",
+    },
+    {
+      title: "Black headset",
+      price: "$399",
+      image: img5,
+      rate: 4,
+      likes: "857",
+    },
+    {
+      title: "Cool headset",
+      price: "$243",
+      image: img1,
+      rate: 4.5,
+      likes: "907",
+    },
+    {
+      title: "Nice headset",
+      price: "$343",
+      image: img4,
+      rate: 4,
+      likes: "957",
+    },
+    {
+      title: "Black headset",
+      price: "$399",
+      image: img5,
+      rate: 4,
+      likes: "857",
+    },
+  ];
 
   return (
     <div>
       <Banner />
       <NewGoods heading="New goods" data={products} />
       <SpecialGoods heading="Special goods" data={products} />
+      <NewGoods heading="Headphone" data={products2} />
     </div>
   );
 }

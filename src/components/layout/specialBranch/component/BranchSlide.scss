@@ -1,0 +1,96 @@
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/brackPoints";
+
+.container {
+  width: 700px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  display: flex;
+  border-radius: 25px;
+  background-color: rgb(210, 216, 176);
+  justify-content: center;
+
+  @include media("<ipad") {
+    width: 300px;
+  }
+}
+
+.slide {
+  width: 100%;
+
+  .slick-dots {
+    width: auto !important;
+  }
+}
+
+.branchSlide {
+  width: 700px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 150px;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    text-align: left;
+
+    @include media("<ipad") {
+      margin: 0;
+      grid-row: 2;
+      align-items: center;
+      font-size: medium;
+    }
+
+    &__name {
+      font-size: 21px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: black;
+
+      @include media("<ipad") {
+        font-size: 17px;
+        margin: 20px auto 10px;
+      }
+    }
+
+    &__detail {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 5px 0;
+      color: rgb(81, 47, 231);
+
+      @include media("<ipad") {
+        font-size: 17px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .image {
+    margin: auto;
+    margin-right: 15px;
+
+    @include media("<ipad") {
+      margin: auto;
+      margin: 20px 15px 5px;
+      grid-row: 1;
+    }
+
+    > img {
+      margin: auto;
+      width: 100%;
+      @include media("<ipad") {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.vertical {
+  width: 300px;
+  grid-template-rows: auto;
+
+  grid-template-columns: 300px;
+}
