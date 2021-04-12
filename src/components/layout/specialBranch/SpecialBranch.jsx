@@ -4,9 +4,9 @@ import "./SpecialBranch.scss";
 function SpecialBranch() {
   return (
     <div className="specialBranch">
-      <BranchSlide />
-      <BranchSlide vertical={"vertical"} />
-      <BranchSlide />
+      <BranchSlide num={"one"} />
+      <BranchSlide num={"two"} />
+      <BranchSlide num={"three"} />
     </div>
   );
 }

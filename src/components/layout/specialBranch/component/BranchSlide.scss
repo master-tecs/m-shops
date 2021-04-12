@@ -2,95 +2,206 @@
 @import "../../../../assets/styles/brackPoints";
 
 .container {
-  width: 700px;
   padding-top: 10px;
   padding-bottom: 40px;
-  display: flex;
   border-radius: 25px;
   background-color: rgb(210, 216, 176);
   justify-content: center;
+  margin: 10px;
 
   @include media("<ipad") {
-    width: 300px;
+    margin: 5px;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+
+    .slick-dots {
+      width: auto !important;
+    }
+
+    .branchSlide {
+      height: 100%;
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include media("<ipad") {
+          margin: 0;
+          grid-row: 2;
+          align-items: center;
+          font-size: medium;
+        }
+
+        &__name {
+          font-size: 21px;
+          font-weight: bold;
+          margin: 20px 0;
+          color: black;
+
+          @include media("<ipad") {
+            font-size: 13px;
+            margin: 20px auto 10px;
+          }
+        }
+
+        &__detail {
+          font-size: 20px;
+          font-weight: bold;
+          margin: 5px 0;
+          color: rgb(81, 47, 231);
+
+          @include media("<ipad") {
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .image {
+        margin: 10px;
+        // margin-right: 15px;
+
+        @include media("<ipad") {
+          margin: auto;
+          margin: 20px 15px 5px;
+          grid-row: 1;
+        }
+
+        > img {
+          margin: auto;
+          width: 75%;
+          @include media("<ipad") {
+            width: 85%;
+          }
+        }
+      }
+    }
   }
 }
 
-.slide {
-  width: 100%;
+.container-one {
+  grid-column: 1 / 3;
 
-  .slick-dots {
-    width: auto !important;
+  @include media("<ipad") {
+    grid-column: 1 / 3;
   }
-}
 
-.branchSlide {
-  width: 700px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 150px;
-
-  .text {
+  .branchSlide {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 50px;
-    text-align: left;
+    height: 200px;
 
-    @include media("<ipad") {
-      margin: 0;
-      grid-row: 2;
-      align-items: center;
-      font-size: medium;
-    }
+    .text {
+      flex: 0.55;
+      text-align: left;
+      align-items: left;
+      margin-left: 50px;
 
-    &__name {
-      font-size: 21px;
-      font-weight: bold;
-      margin: 20px 0;
-      color: black;
-
-      @include media("<ipad") {
-        font-size: 17px;
-        margin: 20px auto 10px;
+      &__detail {
+        @include media("<ipad") {
+          text-align: center;
+        }
       }
     }
 
-    &__detail {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 5px 0;
-      color: rgb(81, 47, 231);
-
-      @include media("<ipad") {
-        font-size: 17px;
-        margin-bottom: 10px;
-      }
-    }
-  }
-
-  .image {
-    margin: auto;
-    margin-right: 15px;
-
-    @include media("<ipad") {
-      margin: auto;
-      margin: 20px 15px 5px;
-      grid-row: 1;
-    }
-
-    > img {
-      margin: auto;
-      width: 100%;
-      @include media("<ipad") {
-        width: 90%;
-      }
+    .image {
+      flex: 0.45;
+      display: flex;
+      justify-content: center;
     }
   }
 }
 
-.vertical {
-  width: 300px;
-  grid-template-rows: auto;
+.container-two {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 
-  grid-template-columns: 300px;
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
+    height: 100%;
+  }
+
+  .branchSlide {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+
+    .text {
+      margin: 10px 15px;
+      text-align: center;
+    }
+
+    .image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .slide {
+    .slick-dots {
+      width: inherit !important;
+    }
+  }
+
+  @include media("<ipad") {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    .slide {
+      .slick-dots {
+        width: inherit !important;
+      }
+    }
+  }
+}
+.container-three {
+  grid-column: 1 / 3;
+
+  .branchSlide {
+    display: flex;
+    height: 100%;
+
+    .text {
+      flex: 0.55;
+      margin-left: 50px;
+      text-align: left;
+    }
+
+    .image {
+      flex: 0.45;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @include media("<ipad") {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    .slide {
+      .slick-dots {
+        width: inherit !important;
+      }
+    }
+
+    .branchSlide {
+      display: flex;
+      flex-direction: column-reverse;
+      //   height: 300px;
+
+      .text {
+        margin: 10px 15px;
+        text-align: center;
+      }
+
+      .image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
 }

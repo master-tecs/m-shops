@@ -1,19 +1,18 @@
-import { useRef } from "react";
 import Slider from "react-slick";
 import img1 from "../../../../assets/img/shoes/11.png";
 import "./BranchSlide.scss";
 
-function BranchSlide({ vertical }) {
+function BranchSlide({ num }) {
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,
-    // autoplay: true,
-    // autoplaySpeed: 7000,
+    autoplay: true,
+    autoplaySpeed: 7000,
     className: "slide",
     responsive: [
       {
@@ -41,19 +40,19 @@ function BranchSlide({ vertical }) {
   };
 
   return (
-    <div className="container">
+    <div className={`container container-${num}`}>
       <Slider {...settings}>
-        <Slide vertical={vertical} />
-        <Slide vertical={vertical} />
-        <Slide vertical={vertical} />
+        <Slide />
+        <Slide />
+        <Slide />
       </Slider>
     </div>
   );
 }
 
-function Slide({ vertical }) {
+function Slide() {
   return (
-    <div className={`branchSlide ${vertical}`}>
+    <div className={`branchSlide`}>
       <div className="text">
         <p className="text__name">Nike Sneakers</p>
         <p className="text__detail">Get Amazing Nike Sneakers</p>
