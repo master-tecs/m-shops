@@ -1,8 +1,8 @@
 $colors: (
   primary: #1a2038,
   secondary: #8f6afc,
-  lightSecondary: rgb(182, 158, 252),
-  darkSecondary: rgba(122, 93, 215, 1),
+  lightSecondary: rgb(170, 93, 215),
+  darkSecondary: darken(rgb(170, 93, 215), 25%),
   surface: #212940,
   primary-light: lighten(#1a2038, 40%),
   primary-dark: darken(#1a2038, 40%),
@@ -10,7 +10,11 @@ $colors: (
   secondary-dark: darken(#212940, 40%),
   lightGreen: lightGreen,
   white: #ffffff,
+  lightGray: lightGray,
   black: #000000,
+  orange: orange,
+  pink: rgb(245, 75, 154),
+  lightBlue: rgb(80, 200, 240),
 );
 
 @function color($color-name) {

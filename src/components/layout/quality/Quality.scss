@@ -1,0 +1,64 @@
+@import "../../../assets/styles/colors";
+
+.quality {
+  width: 90%;
+  height: auto;
+  margin: 40px auto;
+  padding: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: color(darkSecondary);
+  //   background: linear-gradient(48deg, #fff 0%, color(darkSecondary) 82%);
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .component {
+    width: 260px;
+    display: flex;
+    margin: 20px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      margin: 10px auto 15px;
+    }
+
+    .orange {
+      background: linear-gradient(48deg, #fff 0%, color(orange) 82%);
+    }
+
+    .lightBlue {
+      background: linear-gradient(48deg, #fff 0%, color(lightBlue) 82%);
+    }
+
+    .pink {
+      background: linear-gradient(48deg, #fff 0%, color(pink) 82%);
+    }
+
+    .secondary {
+      background: linear-gradient(48deg, #fff 0%, color(secondary) 82%);
+    }
+
+    > h3 {
+      font-size: medium;
+      color: color(white);
+    }
+
+    > p {
+      font-size: small;
+      line-height: 23px;
+      margin: 10px auto;
+      color: color(lightGray);
+    }
+  }
+}

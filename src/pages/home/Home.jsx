@@ -8,6 +8,7 @@ import img3 from "../../assets/img/shoes/13.png";
 import img4 from "../../assets/img/headset/1.png";
 import img5 from "../../assets/img/headset/4.png";
 import SpecialBranch from "../../components/layout/specialBranch/SpecialBranch";
+import Quality from "../../components/layout/quality/Quality";
 
 function Home() {
   const products = [
@@ -53,6 +54,7 @@ function Home() {
       <SpecialGoods heading="Bestselling" data={products} />
       <NewGoods heading="Discounted goods" data={products} />
       <SpecialBranch />
+      <Quality />
     </div>
   );
 }
