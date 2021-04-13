@@ -7,14 +7,30 @@ import "./Quality.scss";
 function Quality() {
   return (
     <div className="quality">
-      <Component title="Free Shipping" Icon={ArtTrackIcon} color="orange" />
-      <Component title="Easy Payments" Icon={PaymentIcon} color="secondary" />
+      <Component
+        title="Free Shipping"
+        Icon={ArtTrackIcon}
+        color="orange"
+        details="All purchases over $99 are eligacle for free shipping via USPS First Class Mail."
+      />
+      <Component
+        title="Easy Payments"
+        Icon={PaymentIcon}
+        color="secondary"
+        details="All payments are processed instantly over a secure protocol."
+      />
       <Component
         title="Money-Back Garantee"
         Icon={LocalAtmIcon}
         color="lightBlue"
+        details="If an item arrived damaged or you have changed your mind, you can send it back for full refund."
       />
-      <Component title="Finest Quality" Icon={HighQualityIcon} color="pink" />
+      <Component
+        title="Finest Quality"
+        Icon={HighQualityIcon}
+        color="pink"
+        details="Designed to last, each of our products has been clerifed with the finest materials."
+      />
     </div>
   );
 }
@@ -26,10 +42,7 @@ function Component({ title, Icon, color, details }) {
         <Icon />
       </div>
       <h3>{title}</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nemo
-        similique corporis ipsam perspiciatis consequuntur!
-      </p>
+      <p>{details}</p>
     </div>
   );
 }
