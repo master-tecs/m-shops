@@ -1,0 +1,156 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+
+.detail {
+  width: 90%;
+  margin: auto;
+  border-radius: 25px;
+  background-color: color(surface);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 100px;
+
+  @include media("<ipad") {
+    width: 95%;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .images {
+    width: 45%;
+
+    @include media("<ipad") {
+      width: 95%;
+    }
+
+    div {
+      width: 100%;
+      height: 340px;
+
+      > img {
+        height: 100%;
+        margin: auto;
+      }
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: -70px;
+      //   background-color: cornflowerblue;
+      height: 60px;
+
+      > li {
+        height: 100%;
+        width: 60px;
+        margin: 0 8px;
+      }
+      .slick-active {
+        border: 5px solid color(secondary);
+      }
+    }
+    .slick-dots img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .itemDetail {
+    width: 45%;
+
+    @include media("<ipad") {
+      width: 90%;
+      margin-top: 100px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+
+      &__text {
+        text-align: left;
+        color: color(white);
+      }
+
+      &__price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 12px;
+        border: 1px solid color(secondary);
+        border-radius: 25px;
+        font-size: small;
+        color: color(white);
+      }
+    }
+
+    .colors {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      color: color(white);
+      > h4 {
+        margin-right: 15px;
+      }
+
+      input[type="checkbox"] {
+        margin-left: 15px;
+      }
+
+      input[type="checkbox"]:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -2px;
+        position: relative;
+        content: "";
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid color(secondary);
+        border-radius: 50%;
+      }
+
+      #blue:after {
+        background-color: #0657c2;
+      }
+      #green:after {
+        background-color: greenyellow;
+      }
+      #orange:after {
+        background-color: orange;
+      }
+      #red:after {
+        background-color: red;
+      }
+
+      input[type="checkbox"]:checked:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 15px;
+        top: -4px;
+        left: -4px;
+        position: relative;
+        content: "";
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid color(secondary);
+        border-radius: 50%;
+      }
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+
+      > h4 {
+        color: color(white);
+        margin-right: 25px;
+
+        @include media("<ipad") {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

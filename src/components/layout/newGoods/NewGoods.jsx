@@ -15,6 +15,8 @@ function NewGoods({ heading, data }) {
     dots: false,
     infinite: true,
     speed: 500,
+    // centerMode: true,
+    // centerPadding: "10%",
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,

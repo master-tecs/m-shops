@@ -2,6 +2,8 @@ import React from "react";
 import Banner from "../components/layout/banner/Banner";
 import NewGoods from "../components/layout/newGoods/NewGoods";
 import SpecialGoods from "../components/layout/specialGoods/SpecialGoods";
+import SpecialBranch from "../components/layout/specialBranch/SpecialBranch";
+import Quality from "../components/layout/quality/Quality";
 
 import img1 from "../assets/img/headset/2.png";
 import img2 from "../assets/img/shoes/11.png";
@@ -97,6 +99,8 @@ function index() {
       <Banner />
       <NewGoods heading="New goods" data={products} />
       <SpecialGoods heading="Special goods" data={products} />
+      <SpecialBranch />
+      <Quality />
       <NewGoods heading="Headphone" data={products2} />
     </div>
   );

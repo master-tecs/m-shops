@@ -1,8 +1,6 @@
-import React from "react";
 import NewGoods from "../../components/layout/newGoods/NewGoods";
-import SpecialGoods from "../../components/layout/specialGoods/SpecialGoods";
-import SpecialBranch from "../../components/layout/specialBranch/SpecialBranch";
-import Quality from "../../components/layout/quality/Quality";
+import Detail from "./components/Detail";
+import "./ItemDetail.scss";
 
 import img1 from "../../assets/img/headset/2.png";
 import img2 from "../../assets/img/shoes/11.png";
@@ -10,7 +8,7 @@ import img3 from "../../assets/img/shoes/13.png";
 import img4 from "../../assets/img/headset/1.png";
 import img5 from "../../assets/img/headset/4.png";
 
-function Home() {
+function ItemDetail() {
   const products = [
     {
       title: "Cool headset",
@@ -50,13 +48,11 @@ function Home() {
   ];
 
   return (
-    <div>
-      <SpecialGoods heading="Bestselling" data={products} />
-      <NewGoods heading="Discounted goods" data={products} />
-      <SpecialBranch />
-      <Quality />
+    <div className="itemDetail">
+      <Detail />
+      <NewGoods heading="New shoe" data={products} />
     </div>
   );
 }
 
-export default Home;
+export default ItemDetail;
