@@ -34,3 +34,50 @@
     0% 75%
   );
 }
+
+@mixin colorsPinker {
+  input[type="checkbox"] {
+    margin-left: 10px;
+  }
+
+  input[type="checkbox"]:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid color(secondary);
+    border-radius: 50%;
+  }
+
+  #blue:after {
+    background-color: #0657c2;
+  }
+  #green:after {
+    background-color: greenyellow;
+  }
+  #orange:after {
+    background-color: orange;
+  }
+  #red:after {
+    background-color: red;
+  }
+
+  input[type="checkbox"]:checked:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -4px;
+    left: -4px;
+    position: relative;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid color(secondary);
+    border-radius: 50%;
+  }
+}

@@ -7,6 +7,7 @@ import img2 from "../../assets/img/shoes/11.png";
 import img3 from "../../assets/img/shoes/13.png";
 import img4 from "../../assets/img/headset/1.png";
 import img5 from "../../assets/img/headset/4.png";
+import Offer from "../../components/layout/offer/Offer";
 
 function ItemDetail() {
   const products = [
@@ -51,6 +52,7 @@ function ItemDetail() {
     <div className="itemDetail">
       <Detail />
       <NewGoods heading="New shoe" data={products} />
+      <Offer />
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import Slider from "react-slick";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import SpecialCard from "../../shared/specialCard/SpecialCard";
 import RoundIcon from "../../shared/icons/RoundIcon";
 
 import "./SpecialGoods.scss";
+import TopTitle from "../../shared/topTitle/TopTitle";
 
 function SpecialGoods({ heading, data }) {
   const slider = useRef();
@@ -85,16 +85,7 @@ function SpecialGoods({ heading, data }) {
 
   return (
     <div className="specialGoods">
-      <div className="top">
-        <div className="top__left">
-          <p className="top__heading">{heading}</p>
-          <label className="label">New</label>
-        </div>
-        <div className="top__right">
-          <p>See all</p>
-          <ArrowRightAltIcon />
-        </div>
-      </div>
+      <TopTitle heading={heading} showNew={true} />
 
       <div className="bottom">
         <div className="bottom__prev" onClick={() => previous()}>

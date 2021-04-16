@@ -1,0 +1,117 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+@import "../../../assets/styles/basics";
+
+.top {
+  width: 95%;
+  margin: 30px auto 10px;
+  color: #fff;
+}
+
+.offer {
+  width: 90%;
+  margin: auto;
+  border-radius: 25px;
+  background-color: color(surface);
+
+  .component {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid color(white);
+    }
+
+    .image {
+      @include media("<ipad") {
+        margin: 20px 30px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 25px;
+        background-color: #fff;
+      }
+      > img {
+        margin-left: 35px;
+        height: 90px;
+        @include media("<ipad") {
+          margin-left: auto;
+        }
+      }
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+
+      @include media("<ipad") {
+        flex-direction: column;
+        height: auto;
+        align-items: start;
+        margin-bottom: 25px;
+      }
+    }
+    .name {
+      margin-left: 25px;
+      text-align: left;
+      color: color(white);
+
+      @include media("<ipad") {
+        margin-top: 15px;
+        margin-left: 0;
+      }
+
+      > h4 {
+        margin-bottom: 5px;
+
+        @include media("<ipad") {
+          font-size: larger;
+        }
+      }
+      > p {
+        margin-top: 10px;
+
+        @include media("<ipad") {
+          margin-bottom: 10px;
+        }
+      }
+      //   }
+    }
+
+    .color {
+      .colors {
+        display: flex;
+        align-items: center;
+        color: color(white);
+
+        > h4 {
+          margin-right: 15px;
+        }
+
+        @include colorsPinker;
+      }
+      .rate {
+        text-align: left;
+        margin-top: 10px;
+      }
+      // background-color: #fff;
+    }
+
+    .price {
+      > p {
+        color: color(white);
+
+        @include media("<ipad") {
+          color: color(white);
+          margin: 10px 0;
+        }
+      }
+    }
+
+    .btn {
+      margin-right: 35px;
+    }
+  }
+}

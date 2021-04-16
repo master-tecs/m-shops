@@ -14,7 +14,7 @@ function Detail() {
     customPaging: function (i) {
       return (
         <a>
-          <img src={`${baseUrl}/${i + 1}.jpg`} />
+          <img src={`${baseUrl}/${i + 1}.jpg`} alt="Nike Shoe" />
         </a>
       );
     },
