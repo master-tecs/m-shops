@@ -2,7 +2,7 @@
 @import "../../../assets/styles/brackPoints";
 @import "../../../assets/styles/basics";
 
-.top {
+.topOffer {
   width: 95%;
   margin: 30px auto 10px;
   color: #fff;
@@ -24,7 +24,7 @@
 
     .image {
       @include media("<ipad") {
-        margin: 20px 30px auto;
+        margin: 20px 20px auto;
         display: flex;
         align-items: center;
         justify-content: center;

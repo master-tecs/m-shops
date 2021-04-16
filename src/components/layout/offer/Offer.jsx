@@ -8,7 +8,7 @@ import TopTitle from "../../shared/topTitle/TopTitle";
 function Offer() {
   return (
     <>
-      <div className="top">
+      <div className="topOffer">
         <TopTitle heading="Offer of Shops" />
       </div>
       <div className="offer">

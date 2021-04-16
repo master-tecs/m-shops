@@ -5,7 +5,7 @@ import { IconButton } from "@material-ui/core";
 import "./Counter.scss";
 
 function Counter({ max }) {
-  const [counter, setCounter] = useState(5);
+  const [counter, setCounter] = useState(1);
   return (
     <div className="counter">
       <IconButton onClick={() => counter > 0 && setCounter(counter - 1)}>
