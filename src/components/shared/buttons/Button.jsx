@@ -5,11 +5,12 @@ import "./Button.scss";
 function Button({
   text,
   Icon,
+  color,
   showOnlyOnSmallDivce,
   dontShowTextOnSmallDivce,
 }) {
   return (
-    <MaterialButton className="button">
+    <MaterialButton className={`button ${color}`}>
       <div
         className={`button__icon ${
           showOnlyOnSmallDivce && "showOnlyOnSmallDivce"

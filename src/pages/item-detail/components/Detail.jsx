@@ -1,7 +1,12 @@
 import Slider from "react-slick";
 import StarRatings from "react-star-ratings";
-// import img from "../../../assets/img/shoes/nike"
+import LocalShippingIcon from "@material-ui/icons/LocalShipping";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import Counter from "../../../components/shared/counter/Counter";
+import Button from "../../../components/shared/buttons/Button";
 import "./Detail.scss";
+import RoundIcon from "../../../components/shared/icons/RoundIcon";
 
 function Detail() {
   const baseUrl = "images/nike";
@@ -28,17 +33,16 @@ function Detail() {
       {/* <div className="images"> */}
       <Slider {...settings}>
         <div>
-          <img src={baseUrl + "/1.jpg"} />
-        </div>
-        {/* <img src="" alt="" /> */}
-        <div>
-          <img src={baseUrl + "/2.jpg"} />
+          <img src={baseUrl + "/1.jpg"} alt="nike shoe-1" />
         </div>
         <div>
-          <img src={baseUrl + "/3.jpg"} />
+          <img src={baseUrl + "/2.jpg"} alt="nike shoe-1" />
         </div>
         <div>
-          <img src={baseUrl + "/4.jpg"} />
+          <img src={baseUrl + "/3.jpg"} alt="nike shoe-1" />
+        </div>
+        <div>
+          <img src={baseUrl + "/4.jpg"} alt="nike shoe-1" />
         </div>
       </Slider>
       {/* </div> */}
@@ -85,6 +89,24 @@ function Detail() {
             starRatedColor="yellow"
             name="rating"
           />
+        </div>
+        <div className="deliveryInfo">
+          <LocalShippingIcon />
+          <h4>Delivery of 10%, tomorrow</h4>
+        </div>
+        <div className="quantity">
+          <h4>Quantity:</h4>
+          <div className="quantityBtns">
+            <div className="btn">
+              <Counter max={10} />
+            </div>
+            <div className="btn long">
+              <Button text="Add Cart" Icon={ShoppingCartIcon} color="orange" />
+            </div>
+            <div className="btn favorite">
+              <RoundIcon Icon={FavoriteIcon} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

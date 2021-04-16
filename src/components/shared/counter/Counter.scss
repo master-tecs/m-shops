@@ -1,0 +1,16 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: color(secondary);
+  //   padding: 4px 8px;
+  border-radius: 25px;
+
+  .MuiSvgIcon-root {
+    color: color(white) !important;
+    font-size: small !important;
+  }
+}

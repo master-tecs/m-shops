@@ -71,3 +71,12 @@
     }
   }
 }
+
+.orange {
+  background: linear-gradient(
+    48deg,
+    rgb(252, 222, 158) 0%,
+    color(orange) 71%
+  ) !important;
+  // background-color: color(orange);
+}

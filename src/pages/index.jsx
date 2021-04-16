@@ -99,7 +99,6 @@ function index() {
       <Banner />
       <NewGoods heading="New goods" data={products} />
       <SpecialGoods heading="Special goods" data={products} />
-      <SpecialBranch />
       <Quality />
       <NewGoods heading="Headphone" data={products2} />
     </div>

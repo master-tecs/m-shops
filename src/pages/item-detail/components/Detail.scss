@@ -20,6 +20,8 @@
 
   .images {
     width: 45%;
+    border-radius: 25px !important;
+    background-color: rgb(255, 255, 255);
 
     @include media("<ipad") {
       width: 95%;
@@ -28,9 +30,11 @@
     div {
       width: 100%;
       height: 340px;
+      border-radius: 25px !important;
 
       > img {
         height: 100%;
+        border-radius: 25px !important;
         margin: auto;
       }
     }
@@ -47,10 +51,12 @@
         margin: 0 8px;
       }
       .slick-active {
-        border: 5px solid color(secondary);
+        border: 4px solid color(secondary);
+        border-radius: 23px !important;
       }
     }
     .slick-dots img {
+      border-radius: 20px !important;
       height: 100%;
       width: 100%;
     }
@@ -70,9 +76,18 @@
       &__text {
         text-align: left;
         color: color(white);
+
+        > h2 {
+          margin-bottom: 15px;
+        }
+        > p {
+          margin-bottom: 20px;
+        }
       }
 
       &__price {
+        height: 35px;
+        width: 95px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -87,8 +102,9 @@
     .colors {
       display: flex;
       align-items: center;
-      margin: 10px 0;
+      margin: 10px 0 45px;
       color: color(white);
+
       > h4 {
         margin-right: 15px;
       }
@@ -149,6 +165,67 @@
 
         @include media("<ipad") {
           margin-right: 5px;
+        }
+      }
+    }
+
+    .deliveryInfo {
+      display: flex;
+      align-items: center;
+      margin: 20px auto;
+      color: color(white);
+      margin-bottom: 55px;
+
+      .MuiSvgIcon-root {
+        color: color(lightgray) !important;
+      }
+
+      > h4 {
+        margin-left: 10px;
+
+        @include media("<ipad") {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .quantity {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      // margin: 20px auto;
+      color: color(white);
+
+      &Btns {
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+
+        .btn {
+          margin-right: 10px;
+        }
+
+        .favorite {
+          background-color: color(secondary);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+
+          .MuiSvgIcon-root {
+            color: color(white) !important;
+          }
+        }
+
+        .long {
+          width: 150px;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
