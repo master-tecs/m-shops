@@ -23,6 +23,8 @@ function ItemsInCart() {
         </div>
       </div>
       <Item image={img1} />
+      <Item image={img1} />
+      <Item image={img1} />
       <Total />
     </div>
   );

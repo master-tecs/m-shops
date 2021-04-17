@@ -28,7 +28,9 @@ function Item({ image }) {
       </div>
       <div className="actions">
         <div className="actions__left">
-          <Counter max={11} color="orange" />
+          <div className="left__counter">
+            <Counter max={11} color="orange" />
+          </div>
           <div className="price">
             <p>123.43 QAR</p>
           </div>

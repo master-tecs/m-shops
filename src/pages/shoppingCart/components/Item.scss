@@ -4,16 +4,25 @@
 
 .item {
   width: 90%;
+  height: auto;
   background-color: color(white);
   display: flex;
-  margin: auto;
+  margin: 15px auto;
   border-radius: 20px;
-  flex-wrap: wrap;
+  //   flex-wrap: wrap;
+
+  @include media("<ipadPro") {
+    flex-direction: column;
+  }
 
   &__details {
-    width: 55%;
+    width: 65%;
     display: flex;
     align-items: center;
+
+    @include media("<ipadPro") {
+      width: 100%;
+    }
 
     > img {
       height: 65px;
@@ -21,12 +30,27 @@
       border-radius: 20px;
       background-color: color(orange);
       margin: 15px;
+
+      @include media("<ipadPro") {
+        margin: 10px;
+      }
+
+      @include media("<ipadPro") {
+        height: 70px;
+        width: 70px;
+      }
     }
 
     .mainInfo {
       flex: 1;
       display: flex;
       justify-content: space-between;
+
+      @include media("<ipadPro") {
+        flex-direction: column;
+        text-align-last: left;
+        // justify-content: start;
+      }
 
       .slelectedColors {
         display: flex;
@@ -46,9 +70,15 @@
   }
 
   .actions {
-    width: 45%;
+    width: 35%;
     display: flex;
     align-items: center;
+
+    @include media("<ipadPro") {
+      width: 100%;
+      //   justify-content: space-between;
+      margin: 10px 10px;
+    }
 
     &__left {
       flex: 1;
@@ -57,8 +87,30 @@
       justify-content: space-evenly;
       height: 50px;
 
+      @include media("<ipadPro") {
+        flex: 0.9;
+        flex-direction: row-reverse;
+        // justify-content: space-between;
+      }
+
+      .left__counter {
+        color: color(white);
+      }
       .price {
         color: color(black);
+
+        @include media("<ipadPro") {
+          background-color: color(white);
+          height: 70%;
+          display: flex;
+          align-items: center;
+          padding: 0 5px;
+          border-radius: 20px;
+          font-size: small;
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+          -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+          -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+        }
       }
     }
 
@@ -72,6 +124,10 @@
       box-shadow: -3px 16px 10px -10px rgba(245, 74, 154, 0.36);
       -webkit-box-shadow: -3px 16px 10px -10px rgba(245, 74, 154, 0.36);
       -moz-box-shadow: -3px 16px 10px -10px rgba(245, 74, 154, 0.36);
+
+      @include media("<ipadPro") {
+        margin: 0 20px;
+      }
     }
   }
 }
