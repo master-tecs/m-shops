@@ -1,5 +1,8 @@
 @import "../../../assets/styles/colors";
 
+.background {
+  background-color: color(darkSecondary);
+}
 .quality {
   width: 90%;
   height: auto;
@@ -7,7 +10,6 @@
   padding: 0;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: color(darkSecondary);
   //   background: linear-gradient(48deg, #fff 0%, color(darkSecondary) 82%);
   border-radius: 25px;
   display: flex;

@@ -1,5 +1,5 @@
 import StarRatings from "react-star-ratings";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import Button from "../../shared/buttons/Button";
 import img1 from "../../../assets/img/shoes/nike/03.png";
 import "./Offer.scss";
@@ -75,7 +75,7 @@ function Component(props) {
           <p>123.43 QAR</p>
         </div>
         <div className="btn">
-          <Button text="Add Cart" Icon={FavoriteIcon} />
+          <Button text="Add Cart" Icon={ShoppingCartIcon} />
         </div>
       </div>
     </div>

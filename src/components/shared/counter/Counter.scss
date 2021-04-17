@@ -14,3 +14,10 @@
     font-size: small !important;
   }
 }
+
+.orange {
+  background: linear-gradient(48deg, #fff 0%, color(orange) 82%);
+  box-shadow: -3px 16px 10px -10px rgba(255, 165, 0, 0.36);
+  -webkit-box-shadow: -3px 16px 10px -10px rgba(255, 165, 0, 0.36);
+  -moz-box-shadow: -3px 16px 10px -10px rgba(255, 165, 0, 0.36);
+}

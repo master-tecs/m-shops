@@ -4,9 +4,9 @@ import PaymentIcon from "@material-ui/icons/Payment";
 import HighQualityIcon from "@material-ui/icons/HighQuality";
 import "./Quality.scss";
 
-function Quality() {
+function Quality({ background }) {
   return (
-    <div className="quality">
+    <div className={`quality ${background}`}>
       <Component
         title="Free Shipping"
         Icon={ArtTrackIcon}

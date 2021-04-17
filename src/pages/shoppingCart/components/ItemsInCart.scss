@@ -1,0 +1,41 @@
+@import "../../../assets/styles/colors";
+
+.itemsInCart {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  background-color: color(surface);
+  margin: auto;
+  border-radius: 25px;
+
+  &__top {
+    display: flex;
+    margin: 35px 50px 10px;
+    justify-content: space-between;
+
+    > h3 {
+      color: color(white);
+    }
+
+    .steps {
+      display: flex;
+      align-items: center;
+      color: color(white);
+
+      &__activeIcon {
+        background: linear-gradient(48deg, #fff 0%, color(orange) 82%);
+        border-radius: 25px;
+      }
+
+      > span {
+        margin: auto 7px;
+      }
+
+      &__icon {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

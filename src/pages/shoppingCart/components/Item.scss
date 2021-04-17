@@ -1,0 +1,77 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+@import "../../../assets/styles/basics";
+
+.item {
+  width: 90%;
+  background-color: color(white);
+  display: flex;
+  margin: auto;
+  border-radius: 20px;
+  flex-wrap: wrap;
+
+  &__details {
+    width: 55%;
+    display: flex;
+    align-items: center;
+
+    > img {
+      height: 65px;
+      width: 65px;
+      border-radius: 20px;
+      background-color: color(orange);
+      margin: 15px;
+    }
+
+    .mainInfo {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+
+      .slelectedColors {
+        display: flex;
+
+        @include colorsPinker;
+      }
+
+      .delivery {
+        display: flex;
+        align-items: center;
+
+        > p {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .actions {
+    width: 45%;
+    display: flex;
+    align-items: center;
+
+    &__left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 50px;
+
+      .price {
+        color: color(black);
+      }
+    }
+
+    .clear {
+      background-color: color(pink);
+      color: color(white);
+      border-radius: 25px;
+      margin-right: 15px;
+      padding: 5px;
+
+      box-shadow: -3px 16px 10px -10px rgba(245, 74, 154, 0.36);
+      -webkit-box-shadow: -3px 16px 10px -10px rgba(245, 74, 154, 0.36);
+      -moz-box-shadow: -3px 16px 10px -10px rgba(245, 74, 154, 0.36);
+    }
+  }
+}

@@ -54,7 +54,7 @@ function Home() {
       <SpecialGoods heading="Bestselling" data={products} />
       <NewGoods heading="Discounted goods" data={products} />
       <SpecialBranch />
-      <Quality />
+      <Quality background="background" />
     </div>
   );
 }
