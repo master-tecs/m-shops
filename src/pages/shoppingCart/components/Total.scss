@@ -1,0 +1,144 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+@import "../../../assets/styles/basics";
+
+.total {
+  width: 90%;
+  height: auto;
+  min-height: 100px;
+  background-color: color(white);
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  margin: 25px auto;
+  border-radius: 20px;
+
+  @include media("<ipadPro") {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  &__back {
+    display: flex;
+    margin: auto;
+    margin-left: 20px;
+    cursor: pointer;
+
+    @include media("<ipadPro") {
+      margin-left: 8%;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      margin-right: 5px;
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+
+      background-color: color(white);
+      display: flex;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 20px;
+      font-size: small;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+    }
+
+    > p {
+      margin-left: 5px;
+    }
+  }
+
+  &__promo {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    color: color(white);
+    background-color: color(secondary);
+    border-radius: 25px;
+
+    @include media("<ipadPro") {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      width: 90%;
+    }
+
+    > input[type] {
+      outline: none;
+      padding: 10px 15px 10px 25px;
+      border: none;
+      background-color: transparent;
+      color: color(white);
+
+      @include media("<ipadPro") {
+        flex: 1;
+      }
+    }
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: color(white);
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: color(white);
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: color(white);
+    }
+
+    .promo__sendIcon {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__price {
+    display: flex;
+    margin: auto;
+
+    @include media("<ipadPro") {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      margin: 15px auto;
+      width: 90%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    > p {
+      margin: 20px;
+
+      @include media("<ipadPro") {
+        margin: 0;
+      }
+    }
+
+    &--amount {
+      @include media("<ipadPro") {
+        background-color: color(white);
+        display: flex;
+        align-items: center;
+        padding: 7px 10px;
+        border-radius: 20px;
+        font-size: small;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+      }
+    }
+  }
+
+  &__btn {
+    margin: auto;
+
+    @include media("<ipadPro") {
+      margin-right: 8%;
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: flex;
+      height: 60%;
+    }
+  }
+}

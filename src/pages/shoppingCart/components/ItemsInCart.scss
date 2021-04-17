@@ -9,8 +9,9 @@
   border-radius: 25px;
 
   &__top {
+    width: 90%;
     display: flex;
-    margin: 35px 50px 10px;
+    margin: 35px auto 10px;
     justify-content: space-between;
 
     > h3 {

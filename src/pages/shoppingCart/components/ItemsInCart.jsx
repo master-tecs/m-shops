@@ -16,7 +16,7 @@ function ItemsInCart() {
           <div className="steps__activeIcon">
             <RoundIcon Icon={ShoppingCartIcon} />
           </div>
-          <span>----------</span>
+          <span>-------</span>
           <div className="steps__icon">
             <LocalShippingIcon />
           </div>
