@@ -6,6 +6,7 @@ import Home from "./pages/home/Home";
 import ItemDetail from "./pages/item-detail/ItemDetail";
 import "./App.scss";
 import ShoppingCart from "./pages/shoppingCart/ShoppingCart";
+import Summary from "./pages/summary/Summary";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         <Switch>
           <Route path="/item-detail">
             <ItemDetail />
+          </Route>
+          <Route path="/summary">
+            <Summary />
           </Route>
           <Route path="/shopping-cart">
             <ShoppingCart />
