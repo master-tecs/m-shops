@@ -7,6 +7,7 @@ import ItemDetail from "./pages/item-detail/ItemDetail";
 import "./App.scss";
 import ShoppingCart from "./pages/shoppingCart/ShoppingCart";
 import Summary from "./pages/summary/Summary";
+import Payment from "./pages/payment/Payment";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/summary">
             <Summary />
+          </Route>
+          <Route path="/payment">
+            <Payment />
           </Route>
           <Route path="/shopping-cart">
             <ShoppingCart />
