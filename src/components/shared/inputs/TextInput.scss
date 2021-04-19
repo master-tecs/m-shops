@@ -1,0 +1,16 @@
+@import "../../../assets/styles/colors";
+
+.textInput {
+  > input[type="text"] {
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid color(white);
+    border-radius: 20px;
+    background: none;
+    color: color(white);
+
+    &::placeholder {
+      color: color(white);
+    }
+  }
+}

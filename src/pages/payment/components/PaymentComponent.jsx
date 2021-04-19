@@ -3,6 +3,7 @@ import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import RoundIcon from "../../../components/shared/icons/RoundIcon";
 import LoginOrSignup from "../../../components/shared/loginOrSignup/LoginOrSignup";
 import "./PaymentComponent.scss";
+import ShippingInfo from "./ShippingInfo";
 
 function PaymentComponent() {
   return (
@@ -11,6 +12,7 @@ function PaymentComponent() {
       {/* login first */}
       <LoginOrSignup />
       {/* shipping info */}
+      <ShippingInfo />
       {/* shipping info */}
       {/* bottom */}
     </div>
