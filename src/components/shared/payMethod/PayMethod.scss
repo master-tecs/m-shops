@@ -2,13 +2,20 @@
 
 .payMethod {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
   background-color: color(white);
   width: fit-content;
   padding: 10px 20px;
 
   > img {
-    width: 90px;
-    height: 35px;
+    width: 75px;
+    height: 25px;
+  }
+  > p {
+    font-size: large;
+    margin-left: 20px;
+    font-weight: 550;
   }
 }

@@ -14,6 +14,9 @@ function ShippingInfo() {
       <div className="paymentMethods">
         {/* methods */}
         <PayMethod logo={paypal} />
+
+        {/* Delivary Method */}
+        <PayMethod logo={paypal} text="$30" />
       </div>
     </div>
   );
