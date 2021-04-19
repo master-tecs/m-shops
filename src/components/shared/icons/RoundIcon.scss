@@ -40,3 +40,11 @@
     rgba(122, 93, 215, 1) 71%
   );
 }
+
+.stepsDoneIcon {
+  border: 1px solid rgba(237, 208, 123, 1) !important;
+
+  .roundIcon__icon {
+    color: rgba(237, 208, 123, 1) !important;
+  }
+}

@@ -1,0 +1,17 @@
+.loginOrSignup {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: start;
+  //   background-color: #fff;
+
+  .signup,
+  .login {
+    display: flex;
+    height: 40px;
+    // color: black;
+  }
+  .signup {
+    margin-left: 10px;
+  }
+}

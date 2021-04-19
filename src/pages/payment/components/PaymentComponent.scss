@@ -1,0 +1,30 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+@import "../../../assets/styles/basics";
+
+.paymentComponent {
+  @include layer;
+
+  &__top {
+    @include topLayer;
+
+    > h3 {
+      color: color(white);
+    }
+
+    .steps {
+      display: flex;
+      align-items: center;
+      color: color(white);
+
+      &__activeIcon {
+        background: linear-gradient(48deg, #fff 0%, color(orange) 82%);
+        border-radius: 25px;
+      }
+
+      > span {
+        margin: auto 7px;
+      }
+    }
+  }
+}

@@ -80,3 +80,12 @@
   ) !important;
   // background-color: color(orange);
 }
+
+.transparent {
+  background: transparent !important;
+  border: 1px solid color(secondary) !important;
+
+  p {
+    color: color(white);
+  }
+}

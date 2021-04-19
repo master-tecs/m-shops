@@ -81,3 +81,19 @@
     border-radius: 50%;
   }
 }
+
+@mixin topLayer {
+  width: 90%;
+  display: flex;
+  margin: 35px auto 10px;
+  justify-content: space-between;
+}
+
+@mixin layer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  background-color: color(surface);
+  border-radius: 25px;
+  margin: auto;
+}

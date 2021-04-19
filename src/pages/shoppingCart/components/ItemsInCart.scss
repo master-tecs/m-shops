@@ -1,18 +1,11 @@
 @import "../../../assets/styles/colors";
+@import "../../../assets/styles/basics";
 
 .itemsInCart {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  background-color: color(surface);
-  margin: auto;
-  border-radius: 25px;
+  @include layer;
 
   &__top {
-    width: 90%;
-    display: flex;
-    margin: 35px auto 10px;
-    justify-content: space-between;
+    @include topLayer;
 
     > h3 {
       color: color(white);
