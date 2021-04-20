@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
-import Item from "./Item";
+import Item from "../../../components/shared/Item/Item";
 import Total from "./Total";
 import RoundIcon from "../../../components/shared/icons/RoundIcon";
 import "./ItemsInCart.scss";
@@ -27,9 +27,9 @@ function ItemsInCart() {
           </div>
         </div>
       </div>
-      <Item image={img1} />
-      <Item image={img1} />
-      <Item image={img1} />
+      <Item image={img1} buttons={true} />
+      <Item image={img1} buttons={true} />
+      <Item image={img1} buttons={true} />
       <Total />
     </div>
   );

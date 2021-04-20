@@ -1,0 +1,71 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
+
+.shippingInfo {
+  display: flex;
+  margin: auto;
+  margin-top: 15px;
+  width: 90%;
+  justify-content: space-between;
+
+  @include media("<ipadPro") {
+    flex-direction: column;
+  }
+
+  .info {
+    flex: 0.85;
+
+    &__top {
+      margin: 20px 0;
+      text-align: left;
+
+      h4 {
+        color: color(white);
+      }
+    }
+
+    &__input {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+  }
+
+  .paymentMethods {
+    @include media("<ipadPro") {
+      margin-top: 30px;
+    }
+    &__top {
+      margin: 0;
+      text-align: left;
+
+      h4 {
+        color: color(white);
+      }
+    }
+
+    &__options {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .deliveryMethods__top {
+      margin: 0;
+      margin-top: 40px;
+      text-align: left;
+
+      h4 {
+        color: color(white);
+      }
+    }
+
+    .deliveryMethods__options {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+  }
+}

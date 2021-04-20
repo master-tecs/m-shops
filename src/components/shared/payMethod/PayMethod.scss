@@ -1,4 +1,5 @@
 @import "../../../assets/styles/colors";
+@import "../../../assets/styles/brackPoints";
 
 .payMethod {
   display: flex;
@@ -8,14 +9,28 @@
   background-color: color(white);
   width: fit-content;
   padding: 10px 20px;
+  cursor: pointer;
+
+  @include media("<ipadPro") {
+    padding: 5px 10px;
+  }
 
   > img {
     width: 75px;
     height: 25px;
+    @include media("<ipadPro") {
+      width: 65px;
+      height: auto;
+    }
   }
   > p {
     font-size: large;
     margin-left: 20px;
     font-weight: 550;
+
+    @include media("<ipadPro") {
+      font-size: medium;
+      font-weight: 500;
+    }
   }
 }

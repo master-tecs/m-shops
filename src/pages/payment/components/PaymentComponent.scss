@@ -27,4 +27,30 @@
       }
     }
   }
+
+  .bottom {
+    @include topLayer;
+    margin-bottom: 35px;
+
+    &__left {
+    }
+    &__right {
+      flex: 0.8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include media("<ipad") {
+        flex: 0.97;
+      }
+      .delivery {
+        display: flex;
+        color: color(white);
+
+        p {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
 }

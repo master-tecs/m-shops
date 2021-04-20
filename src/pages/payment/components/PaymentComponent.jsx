@@ -1,9 +1,12 @@
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import RoundIcon from "../../../components/shared/icons/RoundIcon";
 import LoginOrSignup from "../../../components/shared/loginOrSignup/LoginOrSignup";
+import Button from "../../../components/shared/buttons/Button";
 import "./PaymentComponent.scss";
 import ShippingInfo from "./ShippingInfo";
+import ShippingItem from "../../../components/shared/shippingItem/ShippingItem";
 
 function PaymentComponent() {
   return (
@@ -14,7 +17,9 @@ function PaymentComponent() {
       {/* shipping info */}
       <ShippingInfo />
       {/* shipping info */}
+      <ShippingItem />
       {/* bottom */}
+      <Bottom />
     </div>
   );
 }
@@ -35,6 +40,25 @@ function Top() {
         <div className="steps__activeIcon">
           <RoundIcon Icon={LocalShippingIcon} />
         </div>
+      </div>
+    </div>
+  );
+}
+
+function Bottom() {
+  return (
+    <div className="bottom">
+      <div className="bottom__left">
+        <Button text="Back" Icon={ArrowBackIcon} color="transparent" />
+      </div>
+
+      <div className="bottom__right">
+        <div className="delivery">
+          <LocalShippingIcon />
+          <p>You are $30.02 missing for free shipping</p>
+        </div>
+        <Button text="Continue Shipping" />
+        <Button text="Procced to payment" color="orange" />
       </div>
     </div>
   );

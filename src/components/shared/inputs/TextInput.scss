@@ -1,11 +1,15 @@
 @import "../../../assets/styles/colors";
 
 .textInput {
+  display: flex;
+  flex: 1;
+
   > input[type="text"] {
-    padding: 10px 15px;
+    width: 100%;
+    padding: 15px 20px;
     outline: none;
     border: 1px solid color(white);
-    border-radius: 20px;
+    border-radius: 25px;
     background: none;
     color: color(white);
 

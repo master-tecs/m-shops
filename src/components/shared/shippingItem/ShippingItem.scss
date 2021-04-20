@@ -1,0 +1,53 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/basics";
+@import "../../../assets/styles/brackPoints";
+
+.shippingItem {
+  width: 90%;
+  margin: auto;
+
+  &__top {
+    margin: 20px 0;
+    text-align: left;
+
+    h4 {
+      color: color(white);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    background-color: color(white);
+    border-radius: 20px;
+
+    @include media("<tablet") {
+      flex-direction: column;
+    }
+
+    .itemReview {
+      flex: 1;
+      margin-left: -3%;
+    }
+
+    .totalReview {
+      flex: 0.15;
+      padding: 10px 15px;
+      border-radius: 25px;
+      margin: auto;
+      margin-right: 3%;
+      display: flex;
+      background-color: color(secondary);
+      color: color(white);
+      justify-content: space-evenly;
+      align-items: center;
+      @include media("<tablet") {
+        width: 50%;
+        margin-right: auto;
+        margin-bottom: 15px;
+      }
+      //   > p {
+      //     margin: 10px;
+      //   }
+    }
+  }
+}

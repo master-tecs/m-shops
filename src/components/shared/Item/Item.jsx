@@ -1,10 +1,10 @@
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import ClearIcon from "@material-ui/icons/Clear";
-import Counter from "../../../components/shared/counter/Counter";
-import RoundIcon from "../../../components/shared/icons/RoundIcon";
+import Counter from "../counter/Counter";
+import RoundIcon from "../icons/RoundIcon";
 import "./Item.scss";
 
-function Item({ image }) {
+function Item({ image, buttons }) {
   return (
     <div className="item">
       <div className="item__details">
@@ -22,22 +22,26 @@ function Item({ image }) {
           </div>
           <div className="delivery">
             <LocalShippingIcon />
-            <p>Delivery of 10%</p>
+            <p>Delivery 10%</p>
           </div>
         </div>
       </div>
       <div className="actions">
         <div className="actions__left">
-          <div className="left__counter">
-            <Counter max={11} color="orange" />
-          </div>
+          {buttons && (
+            <div className="left__counter">
+              <Counter max={11} color="orange" />
+            </div>
+          )}
           <div className="price">
             <p>123.43 QAR</p>
           </div>
         </div>
-        <div className="clear">
-          <RoundIcon Icon={ClearIcon} />
-        </div>
+        {buttons && (
+          <div className="clear">
+            <RoundIcon Icon={ClearIcon} />
+          </div>
+        )}
       </div>
     </div>
   );
