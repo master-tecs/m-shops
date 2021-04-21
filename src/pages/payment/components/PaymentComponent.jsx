@@ -32,11 +32,7 @@ function Top() {
         <div className="steps__doneIcon">
           <RoundIcon Icon={ShoppingCartIcon} type="stepsDoneIcon" />
         </div>
-        <span>-------</span>
-        <div className="steps__doneIcon">
-          <RoundIcon Icon={ShoppingCartIcon} type="stepsDoneIcon" />
-        </div>
-        <span>-------</span>
+        <span>----</span>
         <div className="steps__activeIcon">
           <RoundIcon Icon={LocalShippingIcon} />
         </div>

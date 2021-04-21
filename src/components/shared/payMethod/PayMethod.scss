@@ -12,7 +12,7 @@
   cursor: pointer;
 
   @include media("<ipadPro") {
-    padding: 5px 10px;
+    padding: 4px 8px;
   }
 
   > img {
@@ -25,7 +25,7 @@
   }
   > p {
     font-size: large;
-    margin-left: 20px;
+    margin-left: 8px;
     font-weight: 550;
 
     @include media("<ipadPro") {
