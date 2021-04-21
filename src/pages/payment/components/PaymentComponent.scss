@@ -29,28 +29,80 @@
   }
 
   .bottom {
-    @include topLayer;
-    margin-bottom: 35px;
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, auto) 1fr 1fr;
+    grid-template-rows: 1fr;
 
-    &__left {
+    @include media("<ipadPro") {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 10px;
     }
-    &__right {
-      flex: 0.8;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
 
-      @include media("<ipad") {
-        flex: 0.97;
+    &__back {
+      margin: auto;
+      margin-left: 0;
+    }
+
+    &__delivary {
+      display: flex;
+      margin: auto;
+      color: color(white);
+
+      @include media("<ipadPro") {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
       }
-      .delivery {
-        display: flex;
+
+      > p {
+        margin: auto;
+        margin-left: 10px;
         color: color(white);
 
-        p {
-          margin-left: 5px;
+        @include media("<ipadPro") {
+          font-size: small;
         }
       }
     }
+
+    &__shipping {
+      margin: auto;
+      margin-right: 0;
+
+      @include media("<ipadPro") {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+    }
+
+    &__payment {
+      margin: auto;
+
+      @include media("<ipadPro") {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+      }
+    }
+
+    // &__right {
+    //   flex: 0.8;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: space-between;
+
+    //   @include media("<ipad") {
+    //     flex: 0.97;
+    //   }
+    //   .delivery {
+    //     display: flex;
+    //     color: color(white);
+
+    //     p {
+    //       margin-left: 5px;
+    //     }
+    //   }
+    // }
   }
 }

@@ -48,16 +48,17 @@ function Top() {
 function Bottom() {
   return (
     <div className="bottom">
-      <div className="bottom__left">
+      <div className="bottom__back">
         <Button text="Back" Icon={ArrowBackIcon} color="transparent" />
       </div>
-
-      <div className="bottom__right">
-        <div className="delivery">
-          <LocalShippingIcon />
-          <p>You are $30.02 missing for free shipping</p>
-        </div>
+      <div className="bottom__delivary">
+        <LocalShippingIcon />
+        <p>You are $30.02 missing for free shipping</p>
+      </div>
+      <div className="bottom__shipping">
         <Button text="Continue Shipping" />
+      </div>
+      <div className="bottom__payment">
         <Button text="Procced to payment" color="orange" />
       </div>
     </div>
