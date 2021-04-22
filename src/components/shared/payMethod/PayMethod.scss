@@ -11,6 +11,9 @@
   padding: 10px 20px;
   cursor: pointer;
 
+  -webkit-box-shadow: 0px 0px 4px -1px #000000;
+  box-shadow: 0px 0px 4px -1px #000000;
+
   @include media("<ipadPro") {
     padding: 4px 8px;
   }

@@ -18,3 +18,15 @@
     }
   }
 }
+
+.blue {
+  > input[type="text"] {
+    background-color: color(lightBlue);
+    border: none;
+    color: color(black);
+
+    &::placeholder {
+      color: color(black);
+    }
+  }
+}

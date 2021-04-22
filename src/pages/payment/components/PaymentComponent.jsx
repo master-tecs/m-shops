@@ -24,7 +24,7 @@ function PaymentComponent() {
   );
 }
 
-function Top() {
+export function Top() {
   return (
     <div className="paymentComponent__top">
       <h3>Shipping and Payment</h3>
@@ -41,7 +41,7 @@ function Top() {
   );
 }
 
-function Bottom() {
+export function Bottom() {
   return (
     <div className="bottom">
       <div className="bottom__back">
@@ -52,7 +52,7 @@ function Bottom() {
         <p>You are $30.02 missing for free shipping</p>
       </div>
       <div className="bottom__shipping">
-        <Button text="Continue Shipping" />
+        <Button text="Continue Shipping" color="transparent" />
       </div>
       <div className="bottom__payment">
         <Button text="Procced to payment" color="orange" />

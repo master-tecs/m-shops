@@ -1,0 +1,11 @@
+@import "../../../assets/styles/basics";
+@import "../../../assets/styles/colors";
+
+.review {
+  @include layer;
+  background-color: color(surface);
+
+  &__top {
+    // display: flex;
+  }
+}

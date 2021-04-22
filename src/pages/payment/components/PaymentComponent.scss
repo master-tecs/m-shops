@@ -34,67 +34,67 @@
       }
     }
   }
+}
 
-  .bottom {
-    width: 90%;
-    margin: 30px auto 50px;
-    display: grid;
-    grid-template-columns: 1fr minmax(min-content, auto) 1fr 1fr;
-    grid-template-rows: 1fr;
+.bottom {
+  width: 90%;
+  margin: 30px auto 50px;
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, auto) 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  @include media("<ipadPro") {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__back {
+    margin: auto;
+    margin-left: 0;
+  }
+
+  &__delivary {
+    display: flex;
+    margin: auto;
+    color: color(white);
 
     @include media("<ipadPro") {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      grid-gap: 10px;
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
     }
 
-    &__back {
+    > p {
       margin: auto;
-      margin-left: 0;
-    }
-
-    &__delivary {
-      display: flex;
-      margin: auto;
+      margin-left: 10px;
       color: color(white);
 
       @include media("<ipadPro") {
-        grid-column: 1 / 3;
-        grid-row: 2 / 3;
-      }
-
-      > p {
-        margin: auto;
-        margin-left: 10px;
-        color: color(white);
-
-        @include media("<ipadPro") {
-          font-size: small;
-        }
+        font-size: small;
       }
     }
+  }
 
-    &__shipping {
-      margin: auto;
-      margin-right: 0;
+  &__shipping {
+    margin: auto;
+    margin-right: 0;
 
-      @include media("<ipadPro") {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-      }
+    @include media("<ipadPro") {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
     }
+  }
 
-    &__payment {
-      display: flex;
-      justify-content: center;
-      height: 35px;
-      margin: auto;
+  &__payment {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    margin: auto;
 
-      @include media("<ipadPro") {
-        width: 80%;
-        grid-column: 1 / 3;
-        grid-row: 3 / 4;
-      }
+    @include media("<ipadPro") {
+      width: 80%;
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
     }
   }
 }
