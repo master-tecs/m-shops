@@ -5,6 +5,7 @@
 .paymentMethod {
   @include layer;
   background-color: color(white);
+  margin-top: 30px;
 
   &__top {
     display: flex;

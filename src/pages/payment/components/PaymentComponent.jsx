@@ -11,7 +11,7 @@ import ShippingItem from "../../../components/shared/shippingItem/ShippingItem";
 function PaymentComponent() {
   return (
     <div className="paymentComponent">
-      <Top />
+      <Top title={"Shipping and Payment"} />
       {/* login first */}
       <LoginOrSignup />
       {/* shipping info */}
@@ -24,10 +24,10 @@ function PaymentComponent() {
   );
 }
 
-export function Top() {
+export function Top({ title }) {
   return (
     <div className="paymentComponent__top">
-      <h3>Shipping and Payment</h3>
+      <h3>{title}</h3>
       <div className="steps">
         <div className="steps__doneIcon">
           <RoundIcon Icon={ShoppingCartIcon} type="stepsDoneIcon" />

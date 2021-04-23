@@ -4,8 +4,4 @@
 .review {
   @include layer;
   background-color: color(surface);
-
-  &__top {
-    // display: flex;
-  }
 }

@@ -7,7 +7,7 @@ function Review() {
   return (
     <div className="review">
       <div className="review__top">
-        <Top />
+        <Top title="Summary" />
         <PaymentMethod />
       </div>
       <div className="review__bottom">
