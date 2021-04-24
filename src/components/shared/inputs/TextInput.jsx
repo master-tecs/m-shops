@@ -1,9 +1,9 @@
 import "./TextInput.scss";
 
-function TextInput({ name, background }) {
+function TextInput({ name, type = "text", background }) {
   return (
     <div className={`textInput ${background}`}>
-      <input type="text" placeholder={name} name={name} />
+      <input type={type} placeholder={name} name={name} />
     </div>
   );
 }

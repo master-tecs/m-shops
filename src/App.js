@@ -8,6 +8,7 @@ import "./App.scss";
 import ShoppingCart from "./pages/shoppingCart/ShoppingCart";
 import Summary from "./pages/summary/Summary";
 import Payment from "./pages/payment/Payment";
+import Login from "./pages/auth/Login";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <div className="app">
         <Nav />
         <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/item-detail">
             <ItemDetail />
           </Route>

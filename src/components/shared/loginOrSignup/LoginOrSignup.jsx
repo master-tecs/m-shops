@@ -4,7 +4,7 @@ import "./LoginOrSignup.scss";
 function LoginOrSignup() {
   return (
     <div className="loginOrSignup">
-      <div className="login">
+      <div className="signup">
         <Button text="Login" />
       </div>
       <div className="signup">
