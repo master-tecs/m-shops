@@ -4,7 +4,7 @@
   display: flex;
   flex: 1;
 
-  > input[type="text"] {
+  > input {
     width: 100%;
     padding: 15px 20px;
     outline: none;
@@ -20,7 +20,7 @@
 }
 
 .blue {
-  > input[type="text"] {
+  > input {
     background-color: color(lightBlue);
     border: none;
     color: color(black);
