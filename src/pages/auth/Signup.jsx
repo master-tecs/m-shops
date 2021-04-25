@@ -1,0 +1,31 @@
+import TextInput from "../../components/shared/inputs/TextInput";
+import Button from "../../components/shared/buttons/Button";
+import "./LoginForm.scss";
+
+function Signup() {
+  return (
+    <div className="login">
+      <form action="" className="loginForm">
+        <div className="loginForm__top">
+          <h3>Sign up</h3>
+          <TextInput name="Name" />
+          <TextInput name="Email" type="email" />
+          <TextInput name="Password" type="password" />
+          <TextInput name="Confirm password" type="password" />
+          <div>
+            <Button text="Register" />
+          </div>
+        </div>
+        <div className="loginForm__mid">
+          {/* <p>Forget your password?</p> */}
+        </div>
+        <div className="loginForm__bottom">
+          <p>Already have an account?</p>
+          <a href="#">Sign in</a>
+        </div>
+      </form>
+    </div>
+  );
+}
+
+export default Signup;

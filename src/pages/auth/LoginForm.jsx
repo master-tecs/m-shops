@@ -18,7 +18,7 @@ function LoginForm() {
       </div>
       <div className="loginForm__bottom">
         <p>Don't have an account?</p>
-        <a href="#">Sign in</a>
+        <a href="#">Sign up</a>
       </div>
     </form>
   );

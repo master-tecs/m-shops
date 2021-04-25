@@ -9,6 +9,7 @@ import ShoppingCart from "./pages/shoppingCart/ShoppingCart";
 import Summary from "./pages/summary/Summary";
 import Payment from "./pages/payment/Payment";
 import Login from "./pages/auth/Login";
+import Signup from "./pages/auth/Signup";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Switch>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
           </Route>
           <Route path="/item-detail">
             <ItemDetail />
