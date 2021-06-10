@@ -10,7 +10,7 @@ function LoginForm() {
         <h3>Login</h3>
         <TextInput name="Email" type="email" />
         <TextInput name="Password" type="password" />
-        <div>
+        <div className="loginForm__btn">
           <Button text="Login" />
         </div>
       </div>

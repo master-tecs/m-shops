@@ -11,8 +11,14 @@
     grid-gap: 10px;
 
     > h3 {
+      text-align: center;
       margin-bottom: 20px;
       color: color(white);
+    }
+
+    .loginForm__btn {
+      display: flex;
+      justify-content: center;
     }
   }
 

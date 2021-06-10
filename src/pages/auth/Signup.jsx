@@ -13,7 +13,7 @@ function Signup() {
           <TextInput name="Email" type="email" />
           <TextInput name="Password" type="password" />
           <TextInput name="Confirm password" type="password" />
-          <div>
+          <div className="loginForm__btn">
             <Button text="Register" />
           </div>
         </div>
