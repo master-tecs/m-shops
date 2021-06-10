@@ -4,13 +4,13 @@ import Counter from "../counter/Counter";
 import RoundIcon from "../icons/RoundIcon";
 import "./Item.scss";
 
-function Item({ image, buttons }) {
+function Item({ id, image, buttons, title, qty, price, offer, handleClick }) {
   return (
     <div className="item">
       <div className="item__details">
         <img src={image} alt="Nike Shoe" />
         <div className="mainInfo">
-          <h4>Nike Air Max 200</h4>
+          <h4>{title}</h4>
           <div className="slelectedColors">
             <h4>Color: </h4>
             <input
@@ -21,8 +21,17 @@ function Item({ image, buttons }) {
             />
           </div>
           <div className="delivery">
-            <LocalShippingIcon />
-            <p>Delivery 10%</p>
+            {offer ? (
+              <>
+                <LocalShippingIcon />
+                <p>Delivery 10%</p>
+              </>
+            ) : (
+              <>
+                <LocalShippingIcon />
+                <p>No Discount</p>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -30,15 +39,15 @@ function Item({ image, buttons }) {
         <div className="actions__left">
           {buttons && (
             <div className="left__counter">
-              <Counter max={11} color="orange" />
+              <Counter id={id} qty={qty} max={11} color="orange" />
             </div>
           )}
           <div className="price">
-            <p>123.43 QAR</p>
+            <p>{price} QAR</p>
           </div>
         </div>
         {buttons && (
-          <div className="clear">
+          <div className="clear" onClick={() => handleClick(id)}>
             <RoundIcon Icon={ClearIcon} />
           </div>
         )}

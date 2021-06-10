@@ -68,11 +68,12 @@
 
     @include media("<ipad") {
       width: 90%;
-      margin-top: 100px;
+      margin-top: 50px;
     }
 
     .top {
       display: flex;
+      width: 100%;
       justify-content: space-between;
 
       &__text {
@@ -161,7 +162,7 @@
         align-items: center;
 
         .btn {
-          margin-right: 10px;
+          // margin-right: 10px;
         }
 
         .favorite {
@@ -173,6 +174,7 @@
           height: 35px;
           width: 35px;
           border-radius: 50%;
+          margin-right: 5px;
 
           .MuiSvgIcon-root {
             color: color(white) !important;

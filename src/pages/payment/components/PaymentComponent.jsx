@@ -4,9 +4,10 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import RoundIcon from "../../../components/shared/icons/RoundIcon";
 import LoginOrSignup from "../../../components/shared/loginOrSignup/LoginOrSignup";
 import Button from "../../../components/shared/buttons/Button";
-import "./PaymentComponent.scss";
 import ShippingInfo from "./ShippingInfo";
 import ShippingItem from "../../../components/shared/shippingItem/ShippingItem";
+import { Link, useHistory } from "react-router-dom";
+import "./PaymentComponent.scss";
 
 function PaymentComponent() {
   return (
@@ -42,19 +43,36 @@ export function Top({ title }) {
 }
 
 export function Bottom() {
+  let history = useHistory();
+
+  const handleBackClick = () => {
+    history.goBack();
+  };
+
+  const handleContinueShippingClick = () => {
+    history.push("/home");
+  };
+
+  const handleSummaryClick = () => {
+    history.push("/summary");
+  };
+
   return (
     <div className="bottom">
-      <div className="bottom__back">
+      <div className="bottom__back" onClick={() => handleBackClick()}>
         <Button text="Back" Icon={ArrowBackIcon} color="transparent" />
       </div>
       <div className="bottom__delivary">
         <LocalShippingIcon />
         <p>You are $30.02 missing for free shipping</p>
       </div>
-      <div className="bottom__shipping">
+      <div
+        className="bottom__shipping"
+        onClick={() => handleContinueShippingClick()}
+      >
         <Button text="Continue Shipping" color="transparent" />
       </div>
-      <div className="bottom__payment">
+      <div className="bottom__payment" onClick={() => handleSummaryClick()}>
         <Button text="Procced to payment" color="orange" />
       </div>
     </div>

@@ -4,13 +4,14 @@
 
 .topOffer {
   width: 95%;
-  margin: 30px auto 20px;
+  margin: 70px auto 20px;
   color: #fff;
 }
 
 .offer {
   width: 90%;
   margin: auto;
+  margin-bottom: 20px;
   border-radius: 25px;
   background-color: color(surface);
 
@@ -18,100 +19,151 @@
     display: flex;
     align-items: center;
 
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
     &:not(:last-child) {
       border-bottom: 1px solid color(white);
     }
 
-    .image {
-      @include media("<ipad") {
-        margin: 20px 20px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 25px;
-        background-color: #fff;
-      }
-      > img {
-        margin-left: 35px;
-        height: 90px;
-        @include media("<ipad") {
-          margin-left: auto;
-        }
-      }
+    @include media("<bigPhone") {
+      flex-direction: column;
     }
-    .content {
-      flex: 1;
+
+    .offerComponent__left {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      height: 100px;
+      flex: 1;
 
-      @include media("<ipad") {
-        flex-direction: column;
-        height: auto;
-        align-items: start;
-        margin-bottom: 25px;
-      }
-    }
-    .name {
-      margin-left: 25px;
-      text-align: left;
-      color: color(white);
-
-      @include media("<ipad") {
-        margin-top: 15px;
-        margin-left: 0;
+      @include media("<bigPhone") {
+        width: 100%;
       }
 
-      > h4 {
-        margin-bottom: 5px;
-
+      .image {
         @include media("<ipad") {
-          font-size: larger;
+          margin: 20px 20px auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 25px;
+          background-color: #fff;
+        }
+        > img {
+          margin-left: 35px;
+          height: 90px;
+          @include media("<ipad") {
+            margin-left: auto;
+          }
         }
       }
-      > p {
-        margin-top: 10px;
-
-        @include media("<ipad") {
-          margin-bottom: 10px;
-        }
-      }
-      //   }
-    }
-
-    .color {
-      .colors {
+      .offerContainer {
+        width: 100%;
         display: flex;
-        align-items: center;
+        justify-content: space-between;
+
+        @include media("<bigPhone") {
+          align-items: normal;
+          flex-direction: column;
+        }
+
+        .content {
+          flex: 1;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          height: 100px;
+
+          @include media("<ipad") {
+            flex-direction: column;
+            height: auto;
+            align-items: start;
+            margin-bottom: 25px;
+          }
+        }
+
+        // .price {
+        //   > p {
+        //     color: color(white);
+        //     margin-right: 20px;
+
+        //     @include media("<ipad") {
+        //       color: color(white);
+        //       margin: 10px 0;
+        //     }
+        //   }
+
+        //   .btn {
+        //     margin-right: 35px;
+        //   }
+        // }
+      }
+
+      .name {
+        margin-left: 25px;
+        text-align: left;
         color: color(white);
+
+        @include media("<ipad") {
+          margin-top: 15px;
+          margin-left: 0;
+        }
 
         > h4 {
-          margin-right: 15px;
+          margin-bottom: 5px;
+
+          @include media("<ipad") {
+            font-size: larger;
+          }
         }
+        > p {
+          margin-top: 10px;
 
-        @include colorsPinker;
+          @include media("<ipad") {
+            margin-bottom: 10px;
+          }
+        }
+        //   }
       }
-      .rate {
-        text-align: left;
-        margin-top: 10px;
-      }
-      // background-color: #fff;
-    }
 
-    .price {
-      > p {
-        color: color(white);
-
-        @include media("<ipad") {
+      .color {
+        .colors {
+          display: flex;
+          align-items: center;
           color: color(white);
-          margin: 10px 0;
-        }
-      }
-    }
 
-    .btn {
-      margin-right: 35px;
+          > h4 {
+            margin-right: 15px;
+          }
+
+          @include colorsPinker;
+        }
+        .rate {
+          text-align: left;
+          margin-top: 10px;
+        }
+        // background-color: #fff;
+      }
     }
   }
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  color: color(white);
+
+  @include media("<bigPhone") {
+    margin: 0;
+    justify-content: left;
+  }
+}
+
+.offerBtn {
+  margin: 20px 30px 20px 0;
 }

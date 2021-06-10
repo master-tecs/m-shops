@@ -6,6 +6,7 @@
   flex-direction: column;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 30px;
   width: 90%;
   height: 400px;
 
@@ -17,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
 
     &__left {
       display: flex;
@@ -47,6 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
   }
 
   .label {

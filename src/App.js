@@ -10,40 +10,42 @@ import Summary from "./pages/summary/Summary";
 import Payment from "./pages/payment/Payment";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
+import PageNavigationListener from "./pages/PageNavigationListener";
 
-function App() {
+function App({ currentItem }) {
   return (
-    <Router>
-      <div className="app">
-        <Nav />
-        <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/item-detail">
-            <ItemDetail />
-          </Route>
-          <Route path="/summary">
-            <Summary />
-          </Route>
-          <Route path="/payment">
-            <Payment />
-          </Route>
-          <Route path="/shopping-cart">
-            <ShoppingCart />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/">
-            <Index />
-          </Route>
-        </Switch>
-        <Footer />
-      </div>
+    <Router onUpdate={() => window.scrollTo(0, 0)}>
+      {/* <div className="app"> */}
+      <PageNavigationListener />
+      <Nav />
+      <Switch>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/signup">
+          <Signup />
+        </Route>
+        <Route path="/summary">
+          <Summary />
+        </Route>
+        <Route path="/payment">
+          <Payment />
+        </Route>
+        <Route path="/shopping-cart">
+          <ShoppingCart />
+        </Route>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route path="/item-detail">
+          <ItemDetail />
+        </Route>
+        <Route path="/">
+          <Index />
+        </Route>
+      </Switch>
+      <Footer />
+      {/* </div> */}
     </Router>
   );
 }

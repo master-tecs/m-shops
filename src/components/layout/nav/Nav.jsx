@@ -10,9 +10,21 @@ import LocalMallRoundedIcon from "@material-ui/icons/LocalMallRounded";
 import ShortTextIcon from "@material-ui/icons/ShortText";
 // import StorefrontRoundedIcon from "@material-ui/icons/StorefrontRounded"; This Might look beter for logo
 import "./Nav.scss";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { useEffect } from "react";
 
-function Nav() {
+function Nav({ cart }) {
   const [sidebar, setSidebar] = useState(false);
+  const [cardCount, setCardCount] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
+    setCardCount(count);
+  }, [cart, cardCount]);
 
   return (
     <div className="nav">
@@ -20,14 +32,14 @@ function Nav() {
         <ShortTextIcon />
       </div>
       <SideMenu sidebar={sidebar} setSidebar={setSidebar} />
-      <div className="nav__logo">
+      <Link to="/" className="nav__logo">
         <div className="nav__icon">
           <RoundIcon Icon={LocalMallRoundedIcon} type="logoIconColor" />
         </div>
         <p>
           <span>ALL</span> Shops
         </p>
-      </div>
+      </Link>
       <NavMenu />
       <div className="nav__actions">
         <div className="nav__icon">
@@ -36,15 +48,28 @@ function Nav() {
         <div className="nav__icon">
           <RoundIcon Icon={FavoriteRoundedIcon} type="navIconColor" />
         </div>
-        <div className="nav__icon showOnSmallDevice">
+        {cardCount !== 0 && (
+          <Link to="/shopping-cart" className="count">
+            <span>{cardCount}</span>
+          </Link>
+        )}
+        <Link to="/shopping-cart" className="nav__icon showOnSmallDevice">
           <RoundIcon Icon={ShoppingCartRoundedIcon} type="navIconColor" />
-        </div>
+        </Link>
         <div className="nav__btn">
-          <Button text="Log in" />
+          <Link to="/login">
+            <Button text="Log in" />
+          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default Nav;
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+
+export default connect(mapStateToProps)(Nav);

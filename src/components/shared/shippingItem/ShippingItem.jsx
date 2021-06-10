@@ -1,9 +1,21 @@
+import { useEffect } from "react";
+import { useState } from "react";
+import { connect } from "react-redux";
 import Item from "../Item/Item";
 import "./ShippingItem.scss";
 
-import img1 from "../../../assets/img/shoes/nike/01.png";
+function ShippingItem({ cart }) {
+  const [totalPrice, setTotalPrice] = useState(0);
 
-function ShippingItem() {
+  useEffect(() => {
+    let price = 0;
+
+    cart.forEach((item) => {
+      price += item.qty * item.price;
+      setTotalPrice(price);
+    });
+  }, [cart, totalPrice]);
+
   return (
     <div className="shippingItem">
       <div className="shippingItem__top">
@@ -11,13 +23,23 @@ function ShippingItem() {
       </div>
       <div className="shippingItem__bottom">
         <div className="itemReview">
-          <Item image={img1} buttons={false} />
-          <Item image={img1} buttons={false} />
+          {cart.map(({ id, title, price, offer, image }) => (
+            <Item
+              key={id}
+              id={id}
+              title={title}
+              price={price}
+              offer={offer}
+              image={image}
+              buttons={false}
+              // handleClick={handleClick}
+            />
+          ))}
         </div>
         <div className="totalReview">
           {/* <div className="total"> */}
-          <p>Total cost</p>
-          <p>$553</p>
+          <p>Total cost: </p>
+          <p>{totalPrice} QAR</p>
           {/* </div> */}
         </div>
       </div>
@@ -25,4 +47,10 @@ function ShippingItem() {
   );
 }
 
-export default ShippingItem;
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+
+export default connect(mapStateToProps)(ShippingItem);

@@ -1,6 +1,7 @@
 import TextInput from "../../components/shared/inputs/TextInput";
 import Button from "../../components/shared/buttons/Button";
 import "./LoginForm.scss";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   return (
@@ -14,11 +15,13 @@ function LoginForm() {
         </div>
       </div>
       <div className="loginForm__mid">
-        <p>Forget your password?</p>
+        <Link to="/forget">
+          <p>Forget your password?</p>
+        </Link>
       </div>
       <div className="loginForm__bottom">
         <p>Don't have an account?</p>
-        <a href="#">Sign up</a>
+        <Link to="/signup">Sign up</Link>
       </div>
     </form>
   );

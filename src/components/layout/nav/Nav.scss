@@ -41,6 +41,22 @@
     justify-content: center;
     color: color(white);
     align-items: center;
+
+    .count {
+      position: absolute;
+      top: 15px;
+      padding: 5px;
+      border-radius: 25px;
+      z-index: 1;
+      font-size: small;
+      color: color(white);
+      cursor: pointer;
+      background: linear-gradient(
+        48deg,
+        color(lightSecondary) 0%,
+        color(darkSecondary) 71%
+      );
+    }
   }
   &__icon {
     margin-right: 7px;

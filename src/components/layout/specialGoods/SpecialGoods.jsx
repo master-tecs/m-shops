@@ -92,15 +92,17 @@ function SpecialGoods({ heading, data }) {
           <RoundIcon Icon={ArrowBackIcon} type="sliderIconColor" />
         </div>
         <Slider ref={slider} {...settings}>
-          {data.map(({ title, rate, image, price, x, y }, index) => (
+          {data.map((item) => (
             <SpecialCard
-              x={x}
-              y={y}
-              key={index}
-              title={title}
-              rate={rate}
-              price={price}
-              image={image}
+              x={item.x}
+              y={item.y}
+              id={item.id}
+              title={item.title}
+              rate={item.rate}
+              price={item.price}
+              image={item.image}
+              key={item.id}
+              data={item}
               type="normal"
             />
           ))}

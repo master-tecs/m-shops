@@ -1,12 +1,36 @@
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import SendIcon from "@material-ui/icons/Send";
+import { useEffect } from "react";
+import { useState } from "react";
+import { connect } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
 import Button from "../../../components/shared/buttons/Button";
 import "./Total.scss";
 
-function Total() {
+function Total({ cart }) {
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  let history = useHistory();
+
+  useEffect(() => {
+    let price = 0;
+
+    cart.forEach((item) => {
+      price += item.qty * item.price;
+      setTotalPrice(price);
+    });
+  }, [cart, totalPrice]);
+
+  const handleBackClick = () => {
+    history.goBack();
+  };
+
+  // const handleClick = () => {
+  //   history.goBack();
+  // };
   return (
     <div className="total">
-      <div className="total__back">
+      <div className="total__back" onClick={handleBackClick}>
         <ArrowBackIcon />
         <p>Countine Shopping</p>
       </div>
@@ -18,13 +42,18 @@ function Total() {
       </div>
       <div className="total__price">
         <p>Totla cost</p>
-        <p className="total__price--amount">233.49 QAR</p>
+        <p className="total__price--amount">{totalPrice} QAR</p>
       </div>
-      <div className="total__btn">
+      <Link to="/payment" className="total__btn">
         <Button text="CHECKOUT" color="orange" />
-      </div>
+      </Link>
     </div>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
 
-export default Total;
+export default connect(mapStateToProps)(Total);

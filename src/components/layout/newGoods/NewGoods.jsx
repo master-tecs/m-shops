@@ -73,9 +73,11 @@ function NewGoods({ heading, data }) {
         </div>
       </div>
       <Slider ref={slider} {...settings}>
-        {data.map((product, index) => (
+        {data.map((product) => (
           <ProductCard
-            key={index}
+            data={product}
+            key={product.id}
+            id={product.id}
             title={product.title}
             price={product.price}
             image={product.image}

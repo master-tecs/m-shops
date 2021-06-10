@@ -6,12 +6,13 @@ import Total from "./Total";
 import RoundIcon from "../../../components/shared/icons/RoundIcon";
 import "./ItemsInCart.scss";
 
-import img1 from "../../../assets/img/shoes/nike/01.png";
-// import img2 from "../../../assets/img/shoes/nike/02.png";
-// import img3 from "../../../assets/img/shoes/nike/03.png";
+import { connect } from "react-redux";
+import { removeFromCart } from "../../../state/reducers/Shopping/shoppingActions";
 
-function ItemsInCart() {
-  // const [data, setData] = useState([img1, ])
+function ItemsInCart({ cart, removeFromCart }) {
+  const handleClick = (id) => {
+    removeFromCart(id);
+  };
 
   return (
     <div className="itemsInCart">
@@ -27,12 +28,34 @@ function ItemsInCart() {
           </div>
         </div>
       </div>
-      <Item image={img1} buttons={true} />
-      <Item image={img1} buttons={true} />
-      <Item image={img1} buttons={true} />
+      {cart.map(({ id, title, price, qty, offer, image }) => (
+        <Item
+          key={id}
+          id={id}
+          title={title}
+          price={price}
+          offer={offer}
+          qty={qty}
+          image={image}
+          buttons={true}
+          handleClick={handleClick}
+        />
+      ))}
       <Total />
     </div>
   );
 }
 
-export default ItemsInCart;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    removeFromCart: (id) => dispatch(removeFromCart(id)),
+  };
+};
+
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ItemsInCart);

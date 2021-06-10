@@ -10,6 +10,10 @@
     display: none;
   }
 
+  > a {
+    text-decoration: none;
+  }
+
   &__link {
     padding: 15px 20px;
     cursor: pointer;

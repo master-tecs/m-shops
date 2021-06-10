@@ -21,13 +21,20 @@
       // height: 100%;
       // width: 100%;
       z-index: 10;
+      position: fixed;
     }
 
     &__navMenu {
       margin: 15px 5px;
+
+      p {
+        text-align: center;
+      }
     }
 
     &__btn {
+      display: flex;
+      justify-content: center;
       margin: 10px auto;
       width: 100px;
     }

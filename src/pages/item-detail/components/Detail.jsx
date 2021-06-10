@@ -1,3 +1,4 @@
+import { connect } from "react-redux";
 import Slider from "react-slick";
 import StarRatings from "react-star-ratings";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
@@ -5,16 +6,22 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import Counter from "../../../components/shared/counter/Counter";
 import Button from "../../../components/shared/buttons/Button";
-import "./Detail.scss";
 import RoundIcon from "../../../components/shared/icons/RoundIcon";
+import { addToCart } from "../../../state/reducers/Shopping/shoppingActions";
+import "./Detail.scss";
 
-function Detail() {
-  const baseUrl = "images/nike";
+function Detail({ currentItem, addToCart }) {
+  // const baseUrl = "images/nike";
+
+  const handleClick = () => {
+    addToCart(currentItem.id);
+  };
+
   const settings = {
     customPaging: function (i) {
       return (
         <a>
-          <img src={`${baseUrl}/${i + 1}.jpg`} alt="Nike Shoe" />
+          <img src={currentItem.image} alt={currentItem.title} />
         </a>
       );
     },
@@ -32,10 +39,18 @@ function Detail() {
     <div className="detail">
       {/* <div className="images"> */}
       <Slider {...settings}>
-        <div>
-          <img src={baseUrl + "/1.jpg"} alt="nike shoe-1" />
-        </div>
-        <div>
+        {currentItem.images ? (
+          currentItem.images.map((image, { index }) => (
+            <div key={index}>
+              <img src={image} alt="nike shoe-1" />
+            </div>
+          ))
+        ) : (
+          <div>
+            <img src={currentItem.image} alt="nike shoe-1" />
+          </div>
+        )}
+        {/* <div>
           <img src={baseUrl + "/2.jpg"} alt="nike shoe-1" />
         </div>
         <div>
@@ -43,17 +58,17 @@ function Detail() {
         </div>
         <div>
           <img src={baseUrl + "/4.jpg"} alt="nike shoe-1" />
-        </div>
+        </div> */}
       </Slider>
       {/* </div> */}
       <div className="itemDetail">
         <div className="top">
           <div className="top__text">
-            <h2>Nike</h2>
-            <p>Air Max 200</p>
+            <h2>{currentItem.company}</h2>
+            <p>{currentItem.title}</p>
           </div>
           <div className="top__price">
-            <p>129.99 QAR</p>
+            <p>{currentItem.price} QAR</p>
           </div>
         </div>
         <div className="colors">
@@ -83,7 +98,7 @@ function Detail() {
         <div className="rating">
           <h4>Product Rating</h4>
           <StarRatings
-            rating={4}
+            rating={currentItem.rate}
             numberOfStars={5}
             starDimension="20px"
             starRatedColor="yellow"
@@ -92,20 +107,26 @@ function Detail() {
         </div>
         <div className="deliveryInfo">
           <LocalShippingIcon />
-          <h4>Delivery of 10%, tomorrow</h4>
+          {currentItem.offer && <h4>Delivery of 10%, tomorrow</h4>}
         </div>
         <div className="quantity">
           <h4>Quantity:</h4>
           <div className="quantityBtns">
             <div className="btn">
-              <Counter max={10} />
+              <Counter id={currentItem.id} qty={currentItem.qty} max={10} />
             </div>
             <div className="btn long">
-              <Button text="Add Cart" Icon={ShoppingCartIcon} color="orange" />
+              <Button
+                handleClick={handleClick}
+                text="Add Cart"
+                Icon={ShoppingCartIcon}
+                color="orange"
+              />
             </div>
             <div className="btn favorite">
               <RoundIcon Icon={FavoriteIcon} />
             </div>
+            <p>{currentItem.likes}</p>
           </div>
         </div>
       </div>
@@ -113,4 +134,16 @@ function Detail() {
   );
 }
 
-export default Detail;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => dispatch(addToCart(id)),
+  };
+};
+
+const mapStateToProps = (state) => {
+  return {
+    currentItem: state.shop.currentItem,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Detail);

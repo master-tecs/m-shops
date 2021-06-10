@@ -4,59 +4,27 @@ import SpecialGoods from "../../components/layout/specialGoods/SpecialGoods";
 import SpecialBranch from "../../components/layout/specialBranch/SpecialBranch";
 import Quality from "../../components/layout/quality/Quality";
 
-import img1 from "../../assets/img/headset/2.png";
-import img2 from "../../assets/img/shoes/11.png";
-import img3 from "../../assets/img/shoes/13.png";
-import img4 from "../../assets/img/headset/1.png";
-import img5 from "../../assets/img/headset/4.png";
+import { useSelector } from "react-redux";
+import { connect } from "react-redux";
 
-function Home() {
-  const products = [
-    {
-      title: "Cool headset",
-      price: "$243",
-      image: img1,
-      rate: 4.5,
-      likes: "907",
-    },
-    {
-      title: "Shoe",
-      price: "$443",
-      image: img2,
-      rate: 4,
-      likes: "787",
-    },
-    {
-      title: "Shoe",
-      price: "$143",
-      image: img3,
-      rate: 4,
-      likes: "657",
-    },
-    {
-      title: "Nice headset",
-      price: "$343",
-      image: img4,
-      rate: 4,
-      likes: "957",
-    },
-    {
-      title: "Black headset",
-      price: "$399",
-      image: img5,
-      rate: 4,
-      likes: "857",
-    },
-  ];
+function Home({ products, special }) {
+  const state = useSelector((state) => state);
 
   return (
     <div>
       <SpecialGoods heading="Bestselling" data={products} />
-      <NewGoods heading="Discounted goods" data={products} />
+      <NewGoods heading="Discounted goods" data={special} />
       <SpecialBranch />
       <Quality background="background" />
     </div>
   );
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    products: state.shop.bestproducts,
+    special: state.shop.specialproducts,
+  };
+};
+
+export default connect(mapStateToProps)(Home);

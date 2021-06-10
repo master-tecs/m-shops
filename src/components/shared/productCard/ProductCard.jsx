@@ -1,3 +1,5 @@
+import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
 import Button from "../buttons/Button";
 import RoundIcon from "../icons/RoundIcon";
 import StarRatings from "react-star-ratings";
@@ -5,10 +7,35 @@ import StarIcon from "@material-ui/icons/Star";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import "./ProductCard.scss";
 
-function ProductCard({ title, image, price, rate, likes }) {
+import {
+  addToCart,
+  loadCurrentItem,
+} from "../../../state/reducers/Shopping/shoppingActions";
+
+function ProductCard({
+  data,
+  id,
+  title,
+  image,
+  price,
+  rate,
+  likes,
+  addToCart,
+}) {
+  let history = useHistory();
+
+  const handleClick = () => {
+    addToCart(id);
+  };
+
+  const handleViewitemClick = () => {
+    loadCurrentItem(data);
+    history.push("/item-detail");
+  };
+
   return (
     <div className="productCard">
-      <div className="productCard__top">
+      <div className="productCard__top" onClick={() => handleViewitemClick()}>
         <div className="productCard__starIcon">
           <RoundIcon Icon={StarIcon} />
         </div>
@@ -19,10 +46,13 @@ function ProductCard({ title, image, price, rate, likes }) {
           <p>{likes}</p>
         </div>
       </div>
-      <div className="productCard__text">
+      <div className="productCard__text" onClick={() => handleViewitemClick()}>
         <p className="productCard__title">{title}</p>
       </div>
-      <div className="productCard__rating">
+      <div
+        className="productCard__rating"
+        onClick={() => handleViewitemClick()}
+      >
         <StarRatings
           rating={rate}
           numberOfStars={5}
@@ -31,12 +61,22 @@ function ProductCard({ title, image, price, rate, likes }) {
           name="rating"
         />
       </div>
-      <div className="productCard__pricing">
-        <p className="productCard__price">{price}</p>
+      <div
+        className="productCard__pricing"
+        onClick={() => handleViewitemClick()}
+      >
+        <p className="productCard__price">{price} QAR</p>
       </div>
-      <Button text="Add Card" />
+      <Button text="Add Card" handleClick={handleClick} />
     </div>
   );
 }
 
-export default ProductCard;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => dispatch(addToCart(id)),
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(ProductCard);

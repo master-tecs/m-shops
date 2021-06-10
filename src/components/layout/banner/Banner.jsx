@@ -2,11 +2,16 @@ import React from "react";
 import Search from "../../shared/search/Search";
 import Button from "../../shared/buttons/Button";
 import ShoppingCartRoundedIcon from "@material-ui/icons/ShoppingCartRounded";
-import img1 from "../../../assets/img/headset/1.png";
 import SpecialCard from "../../shared/specialCard/SpecialCard";
 import "./Banner.scss";
+import { useHistory } from "react-router";
 
-function Banner() {
+function Banner({ data }) {
+  let history = useHistory();
+  const handleClick = () => {
+    history.push("/home");
+  };
+
   return (
     <div className="banner">
       <div className="banner__left">
@@ -22,6 +27,7 @@ function Banner() {
         <div className="banner__cta">
           <Search />
           <Button
+            handleClick={handleClick}
             Icon={ShoppingCartRoundedIcon}
             showOnlyOnSmallDivce={true}
             text="Start Shopping"
@@ -30,7 +36,14 @@ function Banner() {
         </div>
       </div>
       <div className="banner__right">
-        <SpecialCard title="SpecialCard" image={img1} type="banner" />
+        <SpecialCard
+          title={data.title}
+          image={data.image}
+          price={data.price}
+          data={data}
+          id={data.id}
+          type="banner"
+        />
       </div>
     </div>
   );

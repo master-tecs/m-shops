@@ -8,9 +8,19 @@ function Button({
   color,
   showOnlyOnSmallDivce,
   dontShowTextOnSmallDivce,
+  handleClick,
 }) {
+  const clickHandler = () => {
+    if (handleClick) {
+      handleClick();
+    }
+    return;
+  };
   return (
-    <MaterialButton className={`button ${color}`}>
+    <MaterialButton
+      className={`button ${color}`}
+      onClick={() => clickHandler()}
+    >
       <div
         className={`button__icon ${
           showOnlyOnSmallDivce && "showOnlyOnSmallDivce"

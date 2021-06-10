@@ -1,6 +1,7 @@
 import TextInput from "../../components/shared/inputs/TextInput";
 import Button from "../../components/shared/buttons/Button";
 import "./LoginForm.scss";
+import { Link } from "react-router-dom";
 
 function Signup() {
   return (
@@ -21,7 +22,7 @@ function Signup() {
         </div>
         <div className="loginForm__bottom">
           <p>Already have an account?</p>
-          <a href="#">Sign in</a>
+          <Link to="/login">Sign in</Link>
         </div>
       </form>
     </div>
