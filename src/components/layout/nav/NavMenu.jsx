@@ -8,9 +8,15 @@ function NavMenu() {
       <Link to="/home">
         <p className="navMenu__link active">Home</p>
       </Link>
-      <p className="navMenu__link">Products</p>
-      <p className="navMenu__link new">Offers</p>
-      <p className="navMenu__link">My shop</p>
+      <Link to="/products" className="navMenu__link">
+        Products
+      </Link>
+      <Link to="/offers" className="navMenu__link new">
+      Offers
+      </Link>
+      <Link to="/myShop" className="navMenu__link">
+        My shop
+      </Link>
       <p className="navMenu__link">About us</p>
     </div>
   );

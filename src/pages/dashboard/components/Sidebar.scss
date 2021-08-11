@@ -1,0 +1,46 @@
+@import "../../../assets/styles/colors";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.25;
+
+  &__menu {
+    margin-top: 15px;
+    background-color: color(surface);
+    border-radius: 15px;
+
+    h3 {
+      margin: 15px;
+      color: color(lightGray);
+    }
+    ul {
+      li {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        padding-left: 10px;
+        cursor: pointer;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-right: 10px;
+        color: color(secondary);
+
+        &:hover {
+          background-color: color(secondary);
+          color: color(lightGray);
+        }
+
+        p {
+          margin-left: 5px;
+          color: color(lightGray);
+        }
+      }
+      .sidebar__menu--active {
+        background-color: color(secondary);
+        color: color(lightGray);
+      }
+    }
+  }
+}

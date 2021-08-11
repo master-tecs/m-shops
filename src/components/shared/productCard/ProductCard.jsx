@@ -21,6 +21,7 @@ function ProductCard({
   rate,
   likes,
   addToCart,
+  loadCurrentItem
 }) {
   let history = useHistory();
 

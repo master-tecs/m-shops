@@ -1,0 +1,13 @@
+.mainDashboard {
+  flex: 1;
+
+  &__top {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    // background-color: bisque;
+  }
+}
